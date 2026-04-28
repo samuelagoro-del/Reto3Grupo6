@@ -87,6 +87,7 @@ CREATE TABLE Album (
     Titulo VARCHAR(100) NOT NULL,
     Año YEAR NOT NULL,
     Genero VARCHAR(50) NOT NULL,
+    Imagen BLOB,
     IdMusico VARCHAR(5) NOT NULL,
     FOREIGN KEY (IdMusico) REFERENCES Musico(IdMusico)
 );
@@ -96,10 +97,8 @@ CREATE TABLE Album (
 
 CREATE TABLE Cancion (
     IdCancion VARCHAR(10) PRIMARY KEY,
-    IdAudio VARCHAR(10) NOT NULL UNIQUE,
     IdAlbum VARCHAR(10) NOT NULL,
     ArtistasInvitados VARCHAR(100),
-    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio),
     FOREIGN KEY (IdAlbum) REFERENCES Album(IdAlbum)
 );
 
