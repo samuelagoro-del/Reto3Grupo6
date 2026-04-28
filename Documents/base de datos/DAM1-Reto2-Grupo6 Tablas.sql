@@ -1,55 +1,148 @@
-use DAM1_reto2_Grupo6;
+-- create database Grupo6_Reto3_dam collate utf8mb4_spanish_ci;
+-- grant all on empresa_nueva_dam.* to dam;
+ use Grupo6_Reto3_dam;
 
-create table Cliente (
-DNI char(9) primary key,
-nombre varchar(50) not null,
-apellido varchar(100) not null,
-correo varchar(200) unique not null,
-contrasena varchar(255) not null
+
+
+-- ARTISTA
+
+CREATE TABLE Artista (
+    IdArtista VARCHAR(5) PRIMARY KEY,
+    NombreArtistico VARCHAR(100) UNIQUE NOT NULL,
+    Genero VARCHAR(50),
+    Imagen BLOB,
+    Descripcion VARCHAR(500) NOT NULL
 );
 
-create table Compra (
-idCompra int auto_increment primary key,
-fecha datetime not null,
-hora time not null,
-precio decimal(8,2) not null,
-descuento decimal(5,2),
-DNI char(9) not null,
-constraint fk_DNI_Cliente foreign key(DNI) references Cliente(DNI) on update cascade
+-- MUSICO
+
+CREATE TABLE Musico (
+    IdMusico VARCHAR(5) PRIMARY KEY,
+    Caracteristica ENUM('solista','grupo') NOT NULL
 );
 
-create table Sala(
-idSala int auto_increment primary key,
-nombre varchar(50) not null
+
+-- PODCASTER
+
+CREATE TABLE Podcaster (
+    IdPodcaster VARCHAR(5) PRIMARY KEY
 );
 
-create table Pelicula(
-idPeli int auto_increment primary key,
-titulo varchar(100)	not null,
-duracion int not null,
-genero varchar(50),
-precio decimal(8,2) not null
+-- IDIOMA
+
+CREATE TABLE Idioma (
+    IdIdioma ENUM('ES','EU','EN','FR','DE','CA','GA','AR') PRIMARY KEY,
+    Descripcion VARCHAR(500) NOT NULL
 );
 
-create table Sesion (
-idSesion int auto_increment primary key,
-fecha date not null,
-horaIni time not null,
-horaFin time not null,
-precio decimal(8,2) not null,
-idSala int not null,
-idPeli int not null,
-constraint fk_idSala_Sala foreign key(idSala) references Sala(idSala) on update cascade,
-constraint fk_idPeli_Pelicula foreign key(idPeli) references Pelicula(idPeli) on update cascade
+
+-- CLIENTE
+
+CREATE TABLE Cliente (
+    IdCliente VARCHAR(5) PRIMARY KEY,
+    Nombre VARCHAR(100) NOT NULL,
+    Apellido VARCHAR(100) NOT NULL,
+     IdIdioma ENUM('ES','EU','EN','FR','DE','CA','GA','AR') NOT NULL,
+    Usuario VARCHAR(50) UNIQUE NOT NULL,
+    Contraseña VARCHAR(100) NOT NULL,
+    FechaNacimiento DATE NOT NULL,
+    FechaRegistro DATE NOT NULL DEFAULT (	CURRENT_DATE),
+    Tipo ENUM('Free','Premium') NOT NULL,
+    FOREIGN KEY (IdIdioma) REFERENCES Idioma(IdIdioma)
 );
 
-create table Entrada (
-idEntrada int auto_increment primary key,
-descuento decimal(5,2),
-precio decimal(8,2) not null,
-num_pers int unsigned not null,
-idCompra int not null,
-idSesion int not null,
-constraint fk_idCompra_Compra foreign key(idCompra) references Compra(idCompra) on update cascade,
-constraint fk_idSesion_Sesion foreign key(idSesion) references Sesion(idSesion) on update cascade
+-- PREMIUM
+
+CREATE TABLE Premium (
+    IdCliente VARCHAR(5) PRIMARY KEY,
+    FechaCaducidad DATE NOT NULL,
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente)
 );
+
+-- AUDIO
+
+CREATE TABLE Audio (
+    IdAudio VARCHAR(10) PRIMARY KEY,
+    Nombre VARCHAR(100) UNIQUE NOT NULL,
+    Duracion INT NOT NULL,
+    Imagen BLOB,
+    Tipo ENUM('podcast','cancion') NOT NULL
+);
+
+-- PODCAST
+
+CREATE TABLE Podcast (
+    IdAudio VARCHAR(10) PRIMARY KEY,
+    NColaboradores INT,
+    IdPodcaster VARCHAR(5) NOT NULL,
+    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio),
+    FOREIGN KEY (IdPodcaster) REFERENCES Podcaster(IdPodcaster)
+);
+
+-- ALBUM
+
+CREATE TABLE Album (
+    IdAlbum VARCHAR(10) PRIMARY KEY,
+    Titulo VARCHAR(100) NOT NULL,
+    Año YEAR NOT NULL,
+    Genero VARCHAR(50) NOT NULL,
+    Imagen BLOB,
+    IdMusico VARCHAR(5) NOT NULL,
+    FOREIGN KEY (IdMusico) REFERENCES Musico(IdMusico)
+);
+
+
+-- CANCIÓN
+
+CREATE TABLE Cancion (
+    IdCancion VARCHAR(10) PRIMARY KEY,
+    IdAudio VARCHAR(10) NOT NULL UNIQUE,
+    IdAlbum VARCHAR(10) NOT NULL,
+    ArtistasInvitados VARCHAR(100),
+    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio),
+    FOREIGN KEY (IdAlbum) REFERENCES Album(IdAlbum)
+);
+
+-- PLAYLIST
+
+CREATE TABLE Playlist (
+    IdList INT PRIMARY KEY,
+    Titulo VARCHAR(100) NOT NULL,
+    FechaCreacion DATE NOT NULL,
+    IdCliente VARCHAR(5) NOT NULL,
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente)
+);
+
+-- PLAYLIST CANCIONES
+
+CREATE TABLE Playlist_Canciones (
+    IdList INT NOT NULL,
+    IdCancion VARCHAR(10) NOT NULL,
+    FechaPlaylist_Cancion DATE NOT NULL,
+    PRIMARY KEY (IdList, IdCancion),
+    FOREIGN KEY (IdList) REFERENCES Playlist(IdList),
+    FOREIGN KEY (IdCancion) REFERENCES Cancion(IdCancion)
+);
+
+-- GUSTOS
+
+CREATE TABLE Gustos (
+    IdCliente VARCHAR(5),
+    IdAudio VARCHAR(10),
+    PRIMARY KEY (IdCliente, IdAudio),
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
+    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio)
+);
+
+-- REPRODUCCIONES
+
+CREATE TABLE Reproducciones (
+    IdCliente VARCHAR(5),
+    IdAudio VARCHAR(10),
+    FechaReproduccion DATE NOT NULL,
+    PRIMARY KEY (IdCliente, IdAudio, FechaReproduccion),
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
+    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio)
+);
+
+
