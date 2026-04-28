@@ -65,8 +65,9 @@ CREATE TABLE Audio (
     IdAudio VARCHAR(10) PRIMARY KEY,
     Nombre VARCHAR(100) UNIQUE NOT NULL,
     Duracion INT NOT NULL,
-    Imagen BLOB,
-    Tipo ENUM('podcast','cancion') NOT NULL
+    NReproducciones INT NOT NULL DEFAULT 0,
+     Archivo BLOB,
+     Tipo ENUM('podcast','cancion') NOT NULL
 );
 
 -- PODCAST
@@ -86,8 +87,6 @@ CREATE TABLE Album (
     Titulo VARCHAR(100) NOT NULL,
     Año YEAR NOT NULL,
     Genero VARCHAR(50) NOT NULL,
-    NReproducciones INT NOT NULL DEFAULT 0,
-     Archivo BLOB,
     IdMusico VARCHAR(5) NOT NULL,
     FOREIGN KEY (IdMusico) REFERENCES Musico(IdMusico)
 );
@@ -136,5 +135,14 @@ CREATE TABLE Gustos (
 );
 
 -- REPRODUCCIONES
+
+CREATE TABLE Reproducciones (
+    IdCliente VARCHAR(5),
+    IdAudio VARCHAR(10),
+    FechaReproduccion DATE NOT NULL,
+    PRIMARY KEY (IdCliente, IdAudio, FechaReproduccion),
+    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
+    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio)
+);
 
 
