@@ -134,15 +134,5 @@ CREATE TABLE Gustos (
     FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio)
 );
 
--- REPRODUCCIONES
-
-CREATE TABLE Reproducciones (
-    IdCliente VARCHAR(5),
-    IdAudio VARCHAR(10),
-    FechaReproduccion DATE NOT NULL,
-    PRIMARY KEY (IdCliente, IdAudio, FechaReproduccion),
-    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
-    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio)
-);
 
 
