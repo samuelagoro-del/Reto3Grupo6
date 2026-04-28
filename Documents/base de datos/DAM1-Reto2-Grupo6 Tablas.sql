@@ -46,7 +46,7 @@ CREATE TABLE Cliente (
     Usuario VARCHAR(50) UNIQUE NOT NULL,
     Contraseña VARCHAR(100) NOT NULL,
     FechaNacimiento DATE NOT NULL,
-    FechaRegistro DATE NOT NULL DEFAULT (	CURRENT_DATE),
+    FechaRegistro DATE NOT NULL DEFAULT (CURRENT_DATE),
     Tipo ENUM('Free','Premium') NOT NULL,
     FOREIGN KEY (IdIdioma) REFERENCES Idioma(IdIdioma)
 );
@@ -86,7 +86,8 @@ CREATE TABLE Album (
     Titulo VARCHAR(100) NOT NULL,
     Año YEAR NOT NULL,
     Genero VARCHAR(50) NOT NULL,
-    Imagen BLOB,
+    NReproducciones INT NOT NULL DEFAULT 0,
+     Archivo BLOB,
     IdMusico VARCHAR(5) NOT NULL,
     FOREIGN KEY (IdMusico) REFERENCES Musico(IdMusico)
 );
@@ -135,14 +136,5 @@ CREATE TABLE Gustos (
 );
 
 -- REPRODUCCIONES
-
-CREATE TABLE Reproducciones (
-    IdCliente VARCHAR(5),
-    IdAudio VARCHAR(10),
-    FechaReproduccion DATE NOT NULL,
-    PRIMARY KEY (IdCliente, IdAudio, FechaReproduccion),
-    FOREIGN KEY (IdCliente) REFERENCES Cliente(IdCliente),
-    FOREIGN KEY (IdAudio) REFERENCES Audio(IdAudio)
-);
 
 
