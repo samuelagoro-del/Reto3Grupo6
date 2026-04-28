@@ -1,60 +1,53 @@
 USE Grupo6_Reto3_dam;
 
--- ARTISTA
-INSERT INTO Artista VALUES
-('A001','Bad Bunny','Reggaeton',NULL,'Artista puertorriqueño de música urbana');
+-- IDIOMA
+INSERT INTO Idioma (IdIdioma, Descripcion)
+VALUES ('ES', 'Español');
 
 -- MUSICO
-INSERT INTO Musico VALUES
-('A001','solista');
+INSERT INTO Musico (IdMusico, Caracteristica)
+VALUES ('M001', 'solista');
 
 -- PODCASTER
-INSERT INTO Podcaster VALUES
-('P001');
+INSERT INTO Podcaster (IdPodcaster)
+VALUES ('P001');
 
--- IDIOMA
-INSERT INTO Idioma VALUES
-('ES','Español');
+-- ARTISTA
+INSERT INTO Artista (IdArtista, NombreArtistico, Genero, Imagen, Descripcion)
+VALUES ('A001', 'DJ Nova', 'Electrónica', NULL, 'Artista de música electrónica');
 
 -- CLIENTE
-INSERT INTO Cliente VALUES
-('C001','Alvaro','Garcia','ES','alvaro23','1234pass','2000-05-12','2026-04-28','Premium');
+INSERT INTO Cliente (IdCliente, Nombre, Apellido, IdIdioma, Usuario, Contraseña, FechaNacimiento, Tipo)
+VALUES ('C001', 'Juan', 'Pérez', 'ES', 'juanp', '1234', '2000-05-10', 'Premium');
 
 -- PREMIUM
-INSERT INTO Premium VALUES
-('C001','2027-04-28');
+INSERT INTO Premium (IdCliente, FechaCaducidad)
+VALUES ('C001', '2026-12-31');
 
 -- AUDIO
-INSERT INTO Audio VALUES
-('AU001','Tití Me Preguntó',240,NULL,'cancion');
+INSERT INTO Audio (IdAudio, Nombre, Duracion, NReproducciones, Archivo, Tipo)
+VALUES ('AU001', 'Cancion Demo', 210, 0, NULL, 'cancion');
 
 -- PODCAST
-INSERT INTO Audio VALUES
-('AU002','Charlando Tech',1800,NULL,'podcast');
-
-INSERT INTO Podcast VALUES
-('AU002',2,'P001');
+INSERT INTO Podcast (IdAudio, NColaboradores, IdPodcaster)
+VALUES ('AU001', 2, 'P001');
 
 -- ALBUM
-INSERT INTO Album VALUES
-('AL001','Un Verano Sin Ti',2022,'Reggaeton',NULL,'A001');
+INSERT INTO Album (IdAlbum, Titulo, Año, Genero, Imagen, IdMusico)
+VALUES ('AL001', 'Electro Hits', 2024, 'Electrónica', NULL, 'M001');
 
 -- CANCION
-INSERT INTO Cancion VALUES
-('CA001','AU001','AL001','');
+INSERT INTO Cancion (IdCancion, IdAlbum, ArtistasInvitados)
+VALUES ('CA001', 'AL001', 'DJ Nova');
 
 -- PLAYLIST
-INSERT INTO Playlist VALUES
-(1,'Favoritas','2026-04-28','C001');
+INSERT INTO Playlist (IdList, Titulo, FechaCreacion, IdCliente)
+VALUES (1, 'Favoritas', '2026-04-28', 'C001');
 
 -- PLAYLIST_CANCIONES
-INSERT INTO Playlist_Canciones VALUES
-(1,'CA001','2026-04-28');
+INSERT INTO Playlist_Canciones (IdList, IdCancion, FechaPlaylist_Cancion)
+VALUES (1, 'CA001', '2026-04-28');
 
 -- GUSTOS
-INSERT INTO Gustos VALUES
-('C001','AU001');
-
--- REPRODUCCIONES
-INSERT INTO Reproducciones VALUES
-('C001','AU001','2026-04-28');
+INSERT INTO Gustos (IdCliente, IdAudio)
+VALUES ('C001', 'AU001');
