@@ -3,42 +3,52 @@ package controlador;
 import modelo.Modelo;
 import modelo.Cliente;
 
+/**
+ * Clase que actúa como intermediaria entre la vista y el modelo.
+ * Gestiona la lógica de autenticación de usuarios.
+ */
 public class Controlador {
     private Modelo modelo;
 
+    /**
+     * Constructor que recibe el modelo.
+     * @param modelo instancia del modelo que gestiona los datos
+     */
     public Controlador(Modelo modelo) {
         this.modelo = modelo;
     }
 
     /**
-     * Método para gestionar el login.
-     * Devuelve: 
-     * 1 si es Admin, 
-     * 2 si es Cliente, 
-     * 0 si los datos son incorrectos.
+     * Gestiona el proceso de login según el tipo de usuario.
+     *
+     * @param usuarioInput nombre de usuario introducido
+     * @param passInput contraseña introducida
+     * @param tipoElegido tipo de usuario ("Admin" o "Cliente")
+     * @return 1 si es administrador, 2 si es cliente, 0 si hay error
      */
     public int login(String usuarioInput, String passInput, String tipoElegido) {
         
-        // PRIMERO: Comprobamos si ha elegido Admin en el JComboBox
+        // Comprueba credenciales de administrador
         if (tipoElegido.equals("Admin")) {
             if (usuarioInput.equals("admin") && passInput.equals("1234")) {
-                return 1; // Código para Administrador
+                return 1;
             } else {
-                return 0; // Datos de admin incorrectos
+                return 0;
             }
         }
 
-        // SEGUNDO: Si ha elegido Cliente, preguntamos al Modelo (Base de Datos)
+        // Consulta al modelo para validar cliente
         if (tipoElegido.equals("Cliente")) {
             Cliente clienteEncontrado = modelo.loginCliente(usuarioInput, passInput);
             
             if (clienteEncontrado != null) {
-                return 2; // Código para Cliente encontrado
+                return 2;
             } else {
-                return 0; // Cliente no encontrado en la BD
+                return 0;
             }
         }
 
-        return 0; // Por si acaso algo falla
+        // Valor por defecto si ocurre algún caso no contemplado
+        return 0;
     }
-} 	
+}
