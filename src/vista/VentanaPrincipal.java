@@ -25,7 +25,7 @@ public class VentanaPrincipal extends JFrame {
         // Pasamos "this" para que los paneles puedan llamar a mostrarPantalla
         // 2. SE LO PASAMOS AL PANEL LOGIN (He añadido miControlador)
         PanelLogin login = new PanelLogin(this, miControlador);
-        registro = new PanelRegistro(this);
+        registro = new PanelRegistro(this, miControlador);
         PanelMenu menu = new PanelMenu(this);
 
         contenedor.add(login, "PANTALLA_LOGIN");
