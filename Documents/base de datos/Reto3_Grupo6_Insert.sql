@@ -24,7 +24,7 @@ VALUES
 ('A005','Jazz Blue','Jazz',NULL,'Jazz clásico'),
 ('A006','Metal Storm','Metal',NULL,'Metal band'),
 ('A007','Electro Wave','Electrónica',NULL,'DJ festival'),
-('A008','Pop Shine','Pop',NULL,'Artista pop'),
+('A008','Pop Shine','Pop',NULL,'Artista pop');
 
 
 -- CLIENTE
