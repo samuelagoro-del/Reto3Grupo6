@@ -13,7 +13,7 @@ INSERT INTO Podcaster (IdPodcaster)
 VALUES ('P001');
 
 -- =========================
--- ARTISTA (50)
+-- ARTISTA (8)
 -- =========================
 INSERT INTO Artista (IdArtista, NombreArtistico, Genero, Imagen, Descripcion)
 VALUES 
