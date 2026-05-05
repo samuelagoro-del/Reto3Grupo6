@@ -130,8 +130,56 @@ VALUES ('AL001', 'Electro Hits', 2024, 'Electrónica', NULL, 'M001'),
 ('AL030','Rock Horizon',2021,'Rock',0x89504E4730,'M003');
 
 -- CANCION
+
 INSERT INTO Cancion (IdCancion, IdAlbum, ArtistasInvitados)
-VALUES ('CA001', 'AL001', 'DJ Nova');
+VALUES
+-- Canciones para el álbum AL0031 (Neon Waves - DJ Nova)
+('C001', 'AL0031', NULL),
+('C002', 'AL0031', 'Luna Vox'),
+('C003', 'AL0031', NULL),
+
+-- Canciones para el álbum AL002 (Cyber Pulse - DJ Nova)
+('C004', 'AL002', 'Electro Wave'),
+('C005', 'AL002', NULL),
+
+-- Canciones para el álbum AL005 (Pop Dreams - Luna Vox)
+('C006', 'AL005', 'DJ Nova'),
+('C007', 'AL005', NULL),
+('C008', 'AL005', 'Pop Shine'),
+
+-- Canciones para el álbum AL008 (Rock Legends - Rock Atlas)
+('C009', 'AL008', 'Metal Storm'),
+('C010', 'AL008', NULL),
+('C011', 'AL008', NULL),
+
+-- Canciones para el álbum AL010 (Urban Flow - MC Urban)
+('C012', 'AL010', NULL),
+('C013', 'AL010', 'DJ Nova'),
+('C014', 'AL010', 'Luna Vox'),
+
+-- Canciones para el álbum AL014 (Blue Notes - Jazz Blue)
+('C015', 'AL014', NULL),
+('C016', 'AL014', NULL),
+
+-- Canciones para el álbum AL016 (Dark Thunder - Metal Storm)
+('C017', 'AL016', 'Rock Atlas'),
+('C018', 'AL016', NULL),
+
+-- Canciones para el álbum AL020 (Electric Pulse - Electro Wave)
+('C019', 'AL020', 'MC Urban'),
+('C020', 'AL020', NULL),
+
+-- Canciones para el álbum AL023 (Shine Pop - Pop Shine)
+('C021', 'AL023', 'Luna Vox'),
+('C022', 'AL023', NULL),
+
+-- Extras para los demás álbumes variados (AL025 a AL030)
+('C023', 'AL025', NULL),
+('C024', 'AL026', 'Pop Shine'),
+('C025', 'AL027', NULL),
+('C026', 'AL028', 'Rock Atlas'),
+('C027', 'AL029', 'DJ Nova'),
+('C028', 'AL030', NULL);
 
 -- PLAYLIST
 INSERT INTO Playlist (IdList, Titulo, FechaCreacion, IdCliente)
