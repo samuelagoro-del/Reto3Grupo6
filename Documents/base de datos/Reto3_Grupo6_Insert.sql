@@ -17,7 +17,7 @@ VALUES ('P001');
 -- =========================
 INSERT INTO Artista (IdArtista, NombreArtistico, Genero, Imagen, Descripcion)
 VALUES 
-  ('A001', 'DJ Nova', 'Electrónica', NULL, 'Artista de música electrónica');
+  ('A001', 'DJ Nova', 'Electrónica', NULL, 'Artista de música electrónica'),
 ('A002','Luna Vox','Pop',NULL,'Cantante pop'),
 ('A003','Rock Atlas','Rock',NULL,'Banda rock'),
 ('A004','MC Urban','HipHop',NULL,'Rap urbano'),
