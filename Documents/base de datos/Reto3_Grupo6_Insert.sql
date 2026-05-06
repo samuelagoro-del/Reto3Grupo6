@@ -6,43 +6,15 @@ VALUES ('ES', 'Español');
 
 -- MUSICO
 INSERT INTO Musico (IdMusico, Caracteristica)
-VALUES ('M001', 'solista'),
-  ('M0031','solista'),
-('M002','grupo'),
-('M003','solista'),
-('M004','solista'),
-('M005','grupo'),
-
-('M006','solista'),
-('M007','grupo'),
-('M008','solista'),
-('M009','solista'),
-('M010','grupo'),
-
-('M011','solista'),
-('M012','solista'),
-('M013','grupo'),
-('M014','solista'),
-('M015','grupo'),
-
-('M016','solista'),
-('M017','grupo'),
-('M018','solista'),
-('M019','solista'),
-('M020','grupo'),
-
-('M021','solista'),
-('M022','grupo'),
-('M023','solista'),
-('M024','solista'),
-('M025','grupo'),
-
-('M026','solista'),
-('M027','grupo'),
-('M028','solista'),
-('M029','grupo'),
-('M030','solista');
-
+VALUES 
+    ('A001', 'solista'), -- DJ Nova
+    ('A002', 'solista'), -- Luna Vox
+    ('A003', 'grupo'),   -- Rock Atlas
+    ('A004', 'solista'), -- MC Urban
+    ('A005', 'solista'), -- Jazz Blue
+    ('A006', 'grupo'),   -- Metal Storm
+    ('A007', 'solista'), -- Electro Wave
+    ('A008', 'solista'); -- Pop Shine
 -- PODCASTER
 INSERT INTO Podcaster (IdPodcaster)
 VALUES ('P001');
