@@ -10,7 +10,7 @@ CREATE TABLE Artista (
     IdArtista VARCHAR(5) PRIMARY KEY,
     NombreArtistico VARCHAR(100) UNIQUE NOT NULL,
     Genero VARCHAR(50),
-    Imagen BLOB,
+    Imagen VARCHAR(500),
     Descripcion VARCHAR(500) NOT NULL
 );
 
@@ -66,7 +66,7 @@ CREATE TABLE Audio (
     Nombre VARCHAR(100) UNIQUE NOT NULL,
     Duracion INT NOT NULL,
     NReproducciones INT NOT NULL DEFAULT 0,
-     Archivo BLOB,
+     Archivo  VARCHAR(500),
      Tipo ENUM('podcast','cancion') NOT NULL
 );
 
@@ -87,7 +87,7 @@ CREATE TABLE Album (
     Titulo VARCHAR(100) NOT NULL,
     Año YEAR NOT NULL,
     Genero VARCHAR(50) NOT NULL,
-    Imagen BLOB,
+    Imagen VARCHAR(500),
     IdMusico VARCHAR(5) NOT NULL,
     FOREIGN KEY (IdMusico) REFERENCES Musico(IdMusico)
 );
