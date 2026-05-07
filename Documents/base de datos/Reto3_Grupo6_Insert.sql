@@ -235,3 +235,15 @@ UPDATE Artista SET Imagen = 'src/imagenes/artistas/5. Karol Gimages.jfif' WHERE 
 UPDATE Artista SET Imagen = 'src/imagenes/artistas/6. The Weekndimages.jfif' WHERE IdArtista = 'A006';
 UPDATE Artista SET Imagen = 'src/imagenes/artistas/7. Bizarrapimages.jfif' WHERE IdArtista = 'A007';
 UPDATE Artista SET Imagen = 'src/imagenes/artistas/8. Quevedoimages.jfif' WHERE IdArtista = 'A008';
+
+USE Grupo6_Reto3_dam;
+
+-- Actualizamos las rutas de las portadas de los álbumes
+UPDATE Album SET Imagen = 'src/imagenes/albunes/id(AL001)bad-bunny-nadie-sabe.jpg' WHERE IdAlbum = 'AL001';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlbum(AL002)descarga.jfif' WHERE IdAlbum = 'AL002';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL003)descarga.jfif' WHERE IdAlbum = 'AL003';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL004)descarga.jfif' WHERE IdAlbum = 'AL004';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL005)descarga.jfif' WHERE IdAlbum = 'AL005';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL006)descarga.jfif' WHERE IdAlbum = 'AL006';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlbum(AL007)descarga.jfif' WHERE IdAlbum = 'AL007';
+UPDATE Album SET Imagen = 'src/imagenes/albunes/idalbum(AL008)descarga.jfif' WHERE IdAlbum = 'AL008';
