@@ -1,16 +1,20 @@
 package modelo;
+
 import java.time.Year;
+
 public class Album  {
+
 	
 	private String IdAlbum;
 	private String Titulo;
-	private  Year Año;
-  private String Genero;
-  private String Imagen;
-  private String idMusico;
+	private  int Año;
+   private String Genero;
+   private String Imagen;
+   private int idMusico;
   
- 
-  public Album(String idAlbum, String titulo, Year año, String genero, String imagen, String idMusico) {
+   
+   
+   public Album(String idAlbum, String titulo, int  año, String genero, String imagen, int idMusico) {
 	IdAlbum = idAlbum;
 	Titulo = titulo;
 	Año = año;
@@ -19,42 +23,98 @@ public class Album  {
 	this.idMusico = idMusico;
 	
 	
-  }
-  public String getIdAlbum() {
+   }
+
+
+
+   public String getIdAlbum() {
 	return IdAlbum;
-  }
-  public void setIdAlbum(String idAlbum) {
+   }
+
+
+
+   public void setIdAlbum(String idAlbum) {
 	IdAlbum = idAlbum;
-  }
-  public String getTitulo() {
+   }
+
+
+
+   public String getTitulo() {
 	return Titulo;
-  }
-  public void setTitulo(String titulo) {
+   }
+
+
+
+   public void setTitulo(String titulo) {
 	Titulo = titulo;
-  }
-  public Year getAño() {
+   }
+
+
+
+   public int getAño() {
 	return Año;
-  }
-  public void setAño(Year año) {
+   }
+
+
+
+   public void setAño(	int año) {
 	Año = año;
-  }
-  public String getGenero() {
+   }
+
+
+
+   public String getGenero() {
 	return Genero;
-  }
-  public void setGenero(String genero) {
+   }
+
+
+
+   public void setGenero(String genero) {
 	Genero = genero;
-  }
-  public String getImagen() {
+   }
+
+
+
+   public String getImagen() {
 	return Imagen;
-  }
-  public void setImagen(String imagen) {
+   }
+
+
+
+   public void setImagen(String imagen) {
 	Imagen = imagen;
-  }
-  public String getIdMusico() {
+   }
+
+
+
+   public int getIdMusico() {
 	return idMusico;
-  }
-  public void setIdMusico(String idMusico) {
+   }
+
+
+
+   public void setIdMusico(int idMusico) {
 	this.idMusico = idMusico;
-  }
+   }
+
+
+
+   @Override
+   public String toString() {
+	return Titulo + "-" + Año + "-" + idMusico ;
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 	
+
 }

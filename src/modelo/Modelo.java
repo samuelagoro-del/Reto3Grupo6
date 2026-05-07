@@ -2,26 +2,12 @@ package modelo;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 
-/**
- * Clase que gestiona las operaciones directas con la base de datos relacionadas 
- * con los clientes. Contiene la lógica para validar el inicio de sesión y 
- * para registrar nuevos usuarios en el sistema.
- */
 public class Modelo {
+	private ArrayList<String> listaAlbumesInfo;
 
-	/**
-	 * Verifica las credenciales de un usuario en la base de datos y recupera sus datos.
-	 * Realiza una consulta uniendo las tablas Cliente y Premium para determinar 
-	 * el tipo de cuenta y obtener la fecha de caducidad si corresponde.
-	 * * @param usuario El nombre de usuario introducido para el login.
-	 * @param pass La contraseña introducida para el login.
-	 * @return Un objeto de tipo {@link ClientePremium} si el usuario es premium, 
-	 * un objeto {@link ClienteFree} si es una cuenta estándar, 
-	 * o null si las credenciales son incorrectas o hay un error.
-	 */
 	public Cliente loginCliente(String usuario, String pass) {
-		// Consulta que une Cliente y Premium para saber si tiene fecha de caducidad
 		String sql = "SELECT C.*, P.FechaCaducidad FROM Cliente C LEFT JOIN Premium P ON C.IdCliente = P.IdCliente WHERE C.Usuario = ? AND C.Contraseña = ?";
 
 		try {
@@ -34,7 +20,6 @@ public class Modelo {
 			if (rs.next()) {
 				String tipo = rs.getString("Tipo");
 
-				// Corregido: rs.getString("IdIdioma") en lugar de "Idioma"
 				if (tipo.equals("Premium")) {
 					return new ClientePremium(
 							rs.getString("Nombre"), rs.getString("Apellido"),
@@ -55,52 +40,27 @@ public class Modelo {
 		return null; 
 	}
 
-	/**
-	 * Registra un nuevo cliente en la base de datos realizando múltiples validaciones y adaptaciones.
-	 * Comprueba si el usuario existe, genera un ID correlativo automático, 
-	 * adapta los formatos de idioma y fecha, y finalmente inserta los datos 
-	 * en la tabla Cliente (y en la tabla Premium si corresponde).
-	 * * @param nombre El nombre del nuevo usuario.
-	 * @param apellido El apellido del nuevo usuario.
-	 * @param usuario El nombre de usuario (nickname) deseado.
-	 * @param contrasenia La contraseña de la cuenta.
-	 * @param fechaNac La fecha de nacimiento (como LocalDate).
-	 * @param fechaRegistro La fecha actual de registro (como String).
-	 * @param limitePremium La fecha de caducidad de la suscripción (como String) o "-" si es cuenta Free.
-	 * @param idioma El idioma seleccionado en texto plano (ej. "Euskera", "Inglés").
-	 * @return Un objeto {@link ClienteFree} o {@link ClientePremium} recién creado si el registro es exitoso, 
-	 * o null si el nombre de usuario ya existe o si ocurre un error.
-	 */
 	public Cliente registrarUsuarioModelo(String nombre, String apellido, String usuario, String contrasenia, LocalDate fechaNac, String fechaRegistro, String limitePremium, String idioma) {
 		try {
 			Connection con = BDConexion.getConexion();
 
-			// ==========================================
-			// 1. COMPROBAR SI EL USUARIO YA EXISTE
-			// ==========================================
 			String sql = "SELECT IdCliente FROM Cliente WHERE Usuario = ?";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, usuario);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				return null; // El usuario ya existe
+				return null; 
 			}
 
-			// ==========================================
-			// 2. GENERAR EL NUEVO IdCliente
-			// ==========================================
 			String sql2 = "SELECT MAX(IdCliente) FROM Cliente";
 			PreparedStatement ps2 = con.prepareStatement(sql2);
 			ResultSet rs2 = ps2.executeQuery();
 
-			rs2.next(); // Como sabemos que siempre hay datos(ya existen clientes), avanzamos directamente
-			String ultimoId = rs2.getString(1); // Recuperamos el último, ej: "C001"
-			int numero = Integer.parseInt(ultimoId.substring(1)); // Extraemos el número
-			String nuevoId = String.format("C%03d", numero + 1); // Generamos el siguiente, ej: "C002"
+			rs2.next(); 
+			String ultimoId = rs2.getString(1); 
+			int numero = Integer.parseInt(ultimoId.substring(1)); 
+			String nuevoId = String.format("C%03d", numero + 1); 
 
-			// ==========================================
-			// 3. AMOLDAR EL IDIOMA SELECCIONADO A LA BD
-			// ==========================================
 			String idIdioma = "ES";
 			if (idioma.equals("Euskera")) {
 				idIdioma = "EU";
@@ -108,25 +68,16 @@ public class Modelo {
 				idIdioma = "EN";
 			}
 
-			// ==========================================
-			// 4. PREPARAR LAS FECHAS PARA SQL
-			// ==========================================
-			/* lo de java.sql.Date es una forma de traducirle a la base de datos la fecha, 
-			esto es por tema de versiones y cosas asi, se podía haber hecho algo con 
-			LocalDate pero creo que por las versiones no*/
 			java.sql.Date sqlFechaNac = java.sql.Date.valueOf(fechaNac);
 			java.sql.Date sqlFechaReg = java.sql.Date.valueOf(fechaRegistro);
 
 			String tipo;
 			if (limitePremium.equals("-")) {
-			    tipo = "Free";
+				tipo = "Free";
 			} else {
-			    tipo = "Premium";
+				tipo = "Premium";
 			}
 
-			// ==========================================
-			// 5. INSERTAR EN LA TABLA CLIENTE
-			// ==========================================
 			String sqlInsertCliente = "INSERT INTO Cliente (IdCliente, Nombre, Apellido, IdIdioma, Usuario, Contraseña, FechaNacimiento, FechaRegistro, Tipo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement psInsertCli = con.prepareStatement(sqlInsertCliente);
 			psInsertCli.setString(1, nuevoId);
@@ -140,10 +91,6 @@ public class Modelo {
 			psInsertCli.setString(9, tipo);
 			psInsertCli.executeUpdate();
 
-			// ==========================================
-			// 6. INSERTAR EN LA TABLA PREMIUM (Si aplica)
-			// ==========================================
-			// hay que iniciarla antes
 			java.sql.Date sqlFechaCaducidad = null;
 			if (tipo.equals("Premium")) {
 				sqlFechaCaducidad = java.sql.Date.valueOf(limitePremium);
@@ -166,5 +113,159 @@ public class Modelo {
 		}
 
 		return null; 
+	}
+
+	public ArrayList<Artista> pedirArtistas() {
+		ArrayList <Artista> lista = new ArrayList<>();
+		try{ 
+			Connection con = BDConexion.getConexion();
+			String sql="Select IdArtista, NombreArtistico, Genero, Imagen, Descripcion from Artista";
+			PreparedStatement pts= con.prepareStatement(sql);
+			ResultSet rs =pts.executeQuery();
+
+			while(rs.next()) {
+				Artista a = new Artista(
+						rs.getString("IdArtista"),
+						rs.getString("NombreArtistico"),
+						rs.getString("Genero"),
+						rs.getString("Imagen"),
+						rs.getString("Descripcion")
+						);
+				lista.add(a);
+			}
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return lista;
+	}
+
+	// ==========================================
+	// MÉTODO NUEVO: Pide los álbumes filtrando por el ID del artista
+	// ==========================================
+	public ArrayList<String> pedirAlbumPorArtista(String idArtista) {
+	    ArrayList<String> listaAlbumes = new ArrayList<>();
+	    this.listaAlbumesInfo = new ArrayList<>(); 
+
+	    String sql = "SELECT art.NombreArtistico, art.Genero AS GeneroArtista, art.Descripcion, art.Imagen AS ImagenArtista, " +
+	                 "a.Titulo AS NombreAlbum, a.Año, COUNT(c.IdCancion) AS NumeroCanciones " +
+	                 "FROM Artista art " +
+	                 "INNER JOIN Album a ON art.IdArtista = a.IdMusico " +
+	                 "LEFT JOIN Cancion c ON a.IdAlbum = c.IdAlbum " +
+	                 "WHERE art.IdArtista = ? " +
+	                 "GROUP BY a.IdAlbum, a.IdMusico, a.Titulo, a.Año, a.Genero, a.Imagen, " +
+	                 "art.IdArtista, art.NombreArtistico, art.Genero, art.Imagen, art.Descripcion " +
+	                 "ORDER BY a.Año DESC";
+
+	    try (Connection con = BDConexion.getConexion();
+	         PreparedStatement pts = con.prepareStatement(sql)) { 
+
+	        pts.setString(1, idArtista); 
+	        ResultSet rs = pts.executeQuery();
+
+	        while(rs.next()) {
+	        	if (listaAlbumesInfo.isEmpty()) {
+	        		// Dentro del if (listaAlbumesInfo.isEmpty())
+	        		listaAlbumesInfo.add(rs.getString("NombreArtistico")); // Posición 0
+	        		listaAlbumesInfo.add(rs.getString("ImagenArtista"));    // Posición 1
+
+	        		String bio = "Generoa: " + rs.getString("GeneroArtista") + "\n" +
+	        		             "Descripción: " + rs.getString("Descripcion");
+	        		listaAlbumesInfo.add(bio); // Posición 2;
+	        	}
+
+	            String fraseAlbum = rs.getString("NombreAlbum") + " - " + 
+	                               rs.getInt("Año") + " (" + 
+	                               rs.getInt("NumeroCanciones") + " cancion)";
+	            listaAlbumes.add(fraseAlbum);
+	        }
+	    } catch (SQLException e) { e.printStackTrace(); }
+	    return listaAlbumes;
+	
+	}
+	public ArrayList<String> pedirAlbumPorArtistaDatos(String idArtista) {
+	    return listaAlbumesInfo;
+	}
+
+	public ArrayList<String> pedirAlbumPorArtistaDatosAlbum(String tituloAlbum) {
+	    ArrayList<String> datos = new ArrayList<>();
+	    
+	    // Consulta ajustada a tu esquema:
+	    // Filtramos por el Título del álbum que viene de la JList
+	    String sql = "SELECT a.Titulo, a.Año, a.Genero, a.Imagen, art.NombreArtistico " +
+	                 "FROM Album a " +
+	                 "JOIN Musico m ON a.IdMusico = m.IdMusico " +
+	                 "JOIN Artista art ON m.IdMusico = art.IdArtista " +
+	                 "WHERE a.Titulo = ?";
+
+	    try (Connection con = BDConexion.getConexion();
+	         PreparedStatement pts = con.prepareStatement(sql)) {
+
+	        pts.setString(1, tituloAlbum);
+	        ResultSet rs = pts.executeQuery();
+
+	        if (rs.next()) {
+	            // Guardamos los datos en orden para el Controlador
+	            datos.add(rs.getString("Titulo"));          // 0
+	            datos.add(rs.getString("Año"));             // 1
+	            datos.add(rs.getString("Genero"));          // 2
+	            datos.add(rs.getString("Imagen"));          // 3
+	            datos.add(rs.getString("NombreArtistico")); // 4
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    
+	    return datos;
+	}
+	public ArrayList<String> pedirCancionesDeAlbum(String tituloAlbum) {
+	    ArrayList<String> listaCanciones = new ArrayList<>();
+	    // Buscamos en Audio (para el nombre) cruzando con Cancion y Album
+	    String sql = "SELECT au.Nombre " +
+	                 "FROM Audio au " +
+	                 "JOIN Cancion c ON au.IdAudio = c.IdCancion " +
+	                 "JOIN Album al ON c.IdAlbum = al.IdAlbum " +
+	                 "WHERE al.Titulo = ?";
+
+	    try (Connection con = BDConexion.getConexion();
+	         PreparedStatement pts = con.prepareStatement(sql)) {
+	        
+	        pts.setString(1, tituloAlbum);
+	        ResultSet rs = pts.executeQuery();
+
+	        while (rs.next()) {
+	            listaCanciones.add(rs.getString("Nombre"));
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	    return listaCanciones;
+	}
+	public ArrayList<String> pedirPodcasters() {
+	    ArrayList<String> lista = new ArrayList<>();
+	    String sql = "SELECT IdPodcaster FROM Podcaster";
+	    try (Connection con = BDConexion.getConexion();
+	         PreparedStatement pts = con.prepareStatement(sql);
+	         ResultSet rs = pts.executeQuery()) {
+	        while (rs.next()) {
+	            lista.add(rs.getString("IdPodcaster"));
+	        }
+	    } catch (SQLException e) { e.printStackTrace(); }
+	    return lista;
+	}
+
+	public ArrayList<String> pedirPodcastsPorPodcaster(String idPodcaster) {
+	    ArrayList<String> lista = new ArrayList<>();
+	    String sql = "SELECT a.Nombre FROM Audio a " +
+	                 "JOIN Podcast p ON a.IdAudio = p.IdAudio " +
+	                 "WHERE p.IdPodcaster = ?";
+	    try (Connection con = BDConexion.getConexion();
+	         PreparedStatement pts = con.prepareStatement(sql)) {
+	        pts.setString(1, idPodcaster);
+	        ResultSet rs = pts.executeQuery();
+	        while (rs.next()) {
+	            lista.add(rs.getString("Nombre"));
+	        }
+	    } catch (SQLException e) { e.printStackTrace(); }
+	    return lista;
 	}
 }

@@ -1,4 +1,5 @@
 package modelo;
+
 public class Artista {
 	private String IdArtista;
 	private String NombreArtistico;
@@ -16,20 +17,42 @@ public class Artista {
 		Descripcion = descripcion;
 		
 	}
+
+
 	public String getIdArtista() {
 		return IdArtista;
 	}
+
+
 	public String getNombreArtistico() {
 		return NombreArtistico;
 	}
+
+
 	public String getGenero() {
 		return Genero;
 	}
+
+
 	public String getImagen() {
 		return Imagen;
 	}
+
+
 	public String getDescripcion() {
 		return Descripcion;
 	}
-		
+
+
+	@Override
+	public String toString() {
+		return   NombreArtistico ;
+	}
+	
+	
+	
+	
+	
+	
+
 }

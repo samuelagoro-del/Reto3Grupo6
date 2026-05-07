@@ -16,18 +16,9 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.awt.event.ActionEvent;
 
-/**
- * Clase que representa el panel de registro de nuevos usuarios y visualización de perfil.
- * Hereda de {@link JPanel}. Esta interfaz es dinámica: se utiliza tanto para crear 
- * una cuenta nueva (con los campos editables por defecto) como para consultar los 
- * datos de un usuario ya existente (con los campos bloqueados hasta pulsar "Editar").
- */
 public class PanelRegistro extends JPanel {
 
-	/** Identificador de versión para la serialización de la clase. */
 	private static final long serialVersionUID = 1L;
-	
-	// Componentes gráficos de la interfaz
 	private JTextField textFieldNombre;
 	private JTextField textFieldUsuario;
 	private JPasswordField textFieldContrasenia;
@@ -39,23 +30,12 @@ public class PanelRegistro extends JPanel {
 	private JComboBox<String> comboBoxIdioma;
 	private JButton btnEditar;
 	private JCheckBox chkPremium;
-	
-	/** Referencia a la ventana principal para la navegación entre paneles. */
 	private VentanaPrincipal principal;
-	
-	/** Variable para almacenar la fecha actual del sistema. */
 	private LocalDate fechaActual;
-	
-	/** Referencia al controlador para procesar la lógica de registro. */
 	private Controlador controlador;
 
 	/**
-	 * Constructor de la clase PanelRegistro.
-	 * Inicializa los componentes gráficos (etiquetas, campos de texto, botones) 
-	 * y define los eventos de los botones para volver atrás, calcular las fechas 
-	 * de la suscripción premium y procesar el registro del usuario.
-	 * * @param principal El marco principal de la aplicación.
-	 * @param controlador El objeto Controlador para enviar los datos a la base de datos.
+	 * Create the panel.
 	 */
 	public PanelRegistro(VentanaPrincipal principal, Controlador controlador) {
 		this.principal = principal;
@@ -268,16 +248,14 @@ public class PanelRegistro extends JPanel {
 		});
 		btnAceptar.setBounds(108, 266, 86, 23);
 		add(btnAceptar);
+		btnAceptar.setBounds(108, 266, 86, 23);
+		add(btnAceptar);
 
 	}
 
-	/**
-	 * Prepara el comportamiento y la interfaz del panel dependiendo de desde dónde se acceda.
-	 * * @param desdeLogin Si es {@code true}, se configura la pantalla para un nuevo registro 
-	 * (campos desbloqueados, fechas reiniciadas, botón editar oculto).
-	 * Si es {@code false}, se configura para visualizar datos existentes 
-	 * (campos bloqueados hasta que se pulse el botón editar).
-	 */
+
+
+
 	public void prepararModo(boolean desdeLogin) {
 		if (desdeLogin) {
 			cambiarEstadoCampos(true);
@@ -291,11 +269,6 @@ public class PanelRegistro extends JPanel {
 		}
 	}
 
-	/**
-	 * Activa o desactiva la edición de los campos del formulario.
-	 * * @param editable {@code true} para permitir la escritura en los campos, 
-	 * {@code false} para bloquearlos y hacerlos de solo lectura.
-	 */
 	private void cambiarEstadoCampos(boolean editable) {
 		textFieldNombre.setEditable(editable);
 		textFieldUsuario.setEditable(editable);
@@ -309,16 +282,7 @@ public class PanelRegistro extends JPanel {
 		}
 	}
 	
-	/**
-	 * Rellena los campos del formulario con los datos de un usuario ya existente en la base de datos.
-	 * * @param nombre El nombre del usuario.
-	 * @param apellido El apellido del usuario.
-	 * @param usuario El nombre de usuario (nickname).
-	 * @param fNac La fecha de nacimiento.
-	 * @param fReg La fecha de registro original en el sistema.
-	 * @param fPrem La fecha límite de la suscripción premium (o "-" si es Free).
-	 * @param idioma El idioma seleccionado por el usuario.
-	 */
+	
 	public void cargarDatosUsuario(String nombre, String apellido, String usuario, String fNac, String fReg, String fPrem, String idioma) {
 	    textFieldNombre.setText(nombre);
 	    textFieldApellido.setText(apellido);

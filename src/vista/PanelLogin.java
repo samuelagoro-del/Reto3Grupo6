@@ -8,38 +8,17 @@ import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-/**
- * Clase que representa el panel de inicio de sesión (Login) de la interfaz gráfica.
- * Hereda de {@link JPanel} y contiene los campos de texto, desplegables y botones 
- * necesarios para que un usuario (Cliente o Administrador) pueda acceder al sistema 
- * o navegar hacia la pantalla de registro.
- */
 public class PanelLogin extends JPanel {
 
-	/** Campo de texto para introducir el nombre de usuario. */
 	private JTextField textFieldUsuario;
-	
-	/** Campo de texto con ocultación de caracteres para introducir la contraseña. */
 	private JPasswordField textFieldContrasenia;
-	
-	/** Referencia a la ventana principal de la aplicación para poder cambiar entre paneles. */
-	private VentanaPrincipal principal; 
-	
-	/** Referencia al controlador para gestionar la lógica de negocio del inicio de sesión. */
+	private VentanaPrincipal principal; // Referencia al marco
 	private Controlador controlador;
 
-	/**
-	 * Constructor de la clase PanelLogin.
-	 * Inicializa y posiciona todos los componentes visuales (etiquetas, campos de texto, 
-	 * botones y desplegables) y define las acciones de los botones.
-	 * * @param principal El marco o ventana principal de la aplicación que contiene este panel.
-	 * @param controlador El objeto Controlador encargado de procesar la lógica de negocio.
-	 */
 	public PanelLogin(VentanaPrincipal principal, Controlador controlador) {
 		this.principal = principal; // Guardamos la referencia
-		this.controlador = controlador; // Guardamos la referencia al controlador (buena práctica añadirlo)
 
-		setBorder(new EmptyBorder(5, 5, 5, 5));
+		setBounds(100, 100, 441, 280);
 		setLayout(null);
 
 		JLabel lblUsuario = new JLabel("Usuario:");
@@ -69,6 +48,11 @@ public class PanelLogin extends JPanel {
 		elegirTipo.setBounds(262, 152, 85, 22);
 		add(elegirTipo);
 
+		
+		
+		
+		
+		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -94,6 +78,12 @@ public class PanelLogin extends JPanel {
 		btnLogin.setBounds(90, 201, 115, 23);
 		add(btnLogin);
 
+		
+		
+		
+		
+		
+		
 		JButton btnRegistrar = new JButton("Registrar");
 		btnRegistrar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
