@@ -121,3 +121,64 @@ VALUES
 -- 13. GUSTOS
 INSERT INTO Gustos (IdCliente, IdAudio)
 VALUES ('C001', 'C001');
+-- Podcaster
+INSERT INTO Podcaster (IdPodcaster) VALUES 
+('P002'), ('P003'), ('P004'), ('P005'), ('P006'), ('P007'), ('P008'), ('P009'), ('P010'),
+('P011'), ('P012'), ('P013'), ('P014'), ('P015'), ('P016'), ('P017'), ('P018'), ('P019'),
+('P020'), ('P021'), ('P022'), ('P023'), ('P024'), ('P025'), ('P026');
+
+-- Audio
+INSERT INTO Audio (IdAudio, Nombre, Duracion, NReproducciones, Archivo, Tipo) VALUES 
+('AU002', 'Tecnología en 5 minutos', 300, 0, NULL, 'podcast'), ('AU003', 'El futuro de la IA', 1500, 0, NULL, 'podcast'),
+('AU004', 'Crímenes Reales: Caso 1', 2400, 0, NULL, 'podcast'), ('AU005', 'Crímenes Reales: Caso 2', 3100, 0, NULL, 'podcast'),
+('AU006', 'Cocina Express: Tortilla', 600, 0, NULL, 'podcast'), ('AU007', 'Secretos del Chef', 1800, 0, NULL, 'podcast'),
+('AU008', 'Meditación Guiada Mañana', 900, 0, NULL, 'podcast'), ('AU009', 'Mindfulness para Dormir', 1200, 0, NULL, 'podcast'),
+('AU010', 'Historia de Roma: Julio César', 3600, 0, NULL, 'podcast'), ('AU011', 'La Caída del Imperio', 4200, 0, NULL, 'podcast'),
+('AU012', 'Economía para Dummies', 1100, 0, NULL, 'podcast'), ('AU013', 'Invertir en Cripto', 1300, 0, NULL, 'podcast'),
+('AU014', 'Fútbol al Día: La Liga', 2000, 0, NULL, 'podcast'), ('AU015', 'Fichajes de Verano', 1800, 0, NULL, 'podcast'),
+('AU016', 'Cine de Culto: 1980', 2500, 0, NULL, 'podcast'), ('AU017', 'Directores de Terror', 2700, 0, NULL, 'podcast'),
+('AU018', 'Aprende Inglés: Viajes', 950, 0, NULL, 'podcast'), ('AU019', 'Inglés de Negocios', 1100, 0, NULL, 'podcast'),
+('AU020', 'Marketing Digital 2026', 1500, 0, NULL, 'podcast'), ('AU021', 'Estrategias SEO', 1600, 0, NULL, 'podcast'),
+('AU022', 'Misterios del Espacio', 3200, 0, NULL, 'podcast'), ('AU023', 'Vida en Marte', 3400, 0, NULL, 'podcast'),
+('AU024', 'Salud Mental: Ansiedad', 2100, 0, NULL, 'podcast'), ('AU025', 'El Poder del Hábito', 2200, 0, NULL, 'podcast'),
+('AU026', 'Moda Sostenible', 1400, 0, NULL, 'podcast'), ('AU027', 'Tendencias Primavera', 1350, 0, NULL, 'podcast'),
+('AU028', 'Gaming News: Nueva Consola', 1900, 0, NULL, 'podcast'), ('AU029', 'Análisis RPG del Año', 2200, 0, NULL, 'podcast'),
+('AU030', 'Política Internacional', 2800, 0, NULL, 'podcast'), ('AU031', 'Conflictos Globales', 3000, 0, NULL, 'podcast'),
+('AU032', 'Ciencia Divertida', 1200, 0, NULL, 'podcast'), ('AU033', 'El ADN Explicado', 1500, 0, NULL, 'podcast'),
+('AU034', 'Viajes: Destino Japón', 2500, 0, NULL, 'podcast'), ('AU035', 'Guía de Mochileros', 2600, 0, NULL, 'podcast'),
+('AU036', 'Autoayuda: Motivación', 1800, 0, NULL, 'podcast'), ('AU037', 'Superación Personal', 1900, 0, NULL, 'podcast'),
+('AU038', 'Física Cuántica', 4000, 0, NULL, 'podcast'), ('AU039', 'Relatividad General', 4200, 0, NULL, 'podcast'),
+('AU040', 'Coches Eléctricos', 1600, 0, NULL, 'podcast'), ('AU041', 'Motores del Futuro', 1700, 0, NULL, 'podcast'),
+('AU042', 'Cuidado de Mascotas', 1100, 0, NULL, 'podcast'), ('AU043', 'Adiestramiento Canino', 1200, 0, NULL, 'podcast'),
+('AU044', 'Leyendas Urbanas', 2300, 0, NULL, 'podcast'), ('AU045', 'Fantasmas en la Ciudad', 2400, 0, NULL, 'podcast'),
+('AU046', 'Fotografía para Móvil', 1400, 0, NULL, 'podcast'), ('AU047', 'Edición en Lightroom', 1550, 0, NULL, 'podcast'),
+('AU048', 'Jardinería en Casa', 1000, 0, NULL, 'podcast'), ('AU049', 'Cultivo de Orquídeas', 1200, 0, NULL, 'podcast'),
+('AU050', 'Humor: Especial Chistes', 900, 0, NULL, 'podcast'), ('AU051', 'Monólogos de Viernes', 2200, 0, NULL, 'podcast');
+
+
+INSERT INTO Podcast (IdAudio, NColaboradores, IdPodcaster) VALUES 
+('AU002', 1, 'P002'), ('AU003', 2, 'P002'),
+('AU004', 1, 'P003'), ('AU005', 1, 'P003'),
+('AU006', 0, 'P004'), ('AU007', 2, 'P004'),
+('AU008', 1, 'P005'), ('AU009', 1, 'P005'),
+('AU010', 3, 'P006'), ('AU011', 2, 'P006'),
+('AU012', 1, 'P007'), ('AU013', 2, 'P007'),
+('AU014', 2, 'P008'), ('AU015', 3, 'P008'),
+('AU016', 1, 'P009'), ('AU017', 2, 'P009'),
+('AU018', 0, 'P010'), ('AU019', 1, 'P010'),
+('AU020', 1, 'P011'), ('AU021', 1, 'P011'),
+('AU022', 2, 'P012'), ('AU023', 3, 'P012'),
+('AU024', 1, 'P013'), ('AU025', 1, 'P013'),
+('AU026', 1, 'P014'), ('AU027', 2, 'P014'),
+('AU028', 2, 'P015'), ('AU029', 1, 'P015'),
+('AU030', 3, 'P016'), ('AU031', 3, 'P016'),
+('AU032', 1, 'P017'), ('AU033', 1, 'P017'),
+('AU034', 2, 'P018'), ('AU035', 1, 'P018'),
+('AU036', 1, 'P019'), ('AU037', 0, 'P019'),
+('AU038', 2, 'P020'), ('AU039', 1, 'P020'),
+('AU040', 1, 'P021'), ('AU041', 2, 'P021'),
+('AU042', 0, 'P022'), ('AU043', 1, 'P022'),
+('AU044', 3, 'P023'), ('AU045', 2, 'P023'),
+('AU046', 1, 'P024'), ('AU047', 1, 'P024'),
+('AU048', 0, 'P025'), ('AU049', 1, 'P025'),
+('AU050', 2, 'P026'), ('AU051', 1, 'P026');
