@@ -1,21 +1,5 @@
 USE Grupo6_Reto3_dam;
 
--- ==========================================
--- 1. LIMPIEZA DE DATOS (Orden jerárquico)
--- ==========================================
-DELETE FROM Gustos;
-DELETE FROM Playlist_Canciones;
-DELETE FROM Playlist;
-DELETE FROM Cancion;
-DELETE FROM Album;
-DELETE FROM Premium;
-DELETE FROM Cliente;
-DELETE FROM Podcast;
-DELETE FROM Audio;
-DELETE FROM Artista;
-DELETE FROM Podcaster;
-DELETE FROM Musico;
-DELETE FROM Idioma;
 
 -- ==========================================
 -- 2. INSERCIÓN DE DATOS ACTUALIZADOS
@@ -238,12 +222,12 @@ UPDATE Artista SET Imagen = 'src/imagenes/artistas/8. Quevedoimages.jfif' WHERE 
 
 USE Grupo6_Reto3_dam;
 
--- Actualizamos las rutas de las portadas de los álbumes
-UPDATE Album SET Imagen = 'src/imagenes/albunes/id(AL001)bad-bunny-nadie-sabe.jpg' WHERE IdAlbum = 'AL001';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlbum(AL002)descarga.jfif' WHERE IdAlbum = 'AL002';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL003)descarga.jfif' WHERE IdAlbum = 'AL003';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL004)descarga.jfif' WHERE IdAlbum = 'AL004';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL005)descarga.jfif' WHERE IdAlbum = 'AL005';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlmub(AL006)descarga.jfif' WHERE IdAlbum = 'AL006';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/IdAlbum(AL007)descarga.jfif' WHERE IdAlbum = 'AL007';
-UPDATE Album SET Imagen = 'src/imagenes/albunes/idalbum(AL008)descarga.jfif' WHERE IdAlbum = 'AL008';
+-- Actualizamos las rutas con las mayúsculas correctas: src/Imagenes/Album/
+UPDATE Album SET Imagen = 'src/Imagenes/Album/id(AL001)bad-bunny-nadie-sabe.jpg' WHERE IdAlbum = 'AL001';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlbum(AL002)descarga.jfif' WHERE IdAlbum = 'AL002';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlmub(AL003)descarga.jfif' WHERE IdAlbum = 'AL003';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlmub(AL004)descarga.jfif' WHERE IdAlbum = 'AL004';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlmub(AL005)descarga.jfif' WHERE IdAlbum = 'AL005';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlmub(AL006)descarga.jfif' WHERE IdAlbum = 'AL006';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlbum(AL007)descarga.jfif' WHERE IdAlbum = 'AL007';
+UPDATE Album SET Imagen = 'src/Imagenes/Album/idalbum(AL008)descarga.jfif' WHERE IdAlbum = 'AL008';
