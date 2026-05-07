@@ -223,3 +223,15 @@ INSERT INTO Cancion (IdCancion, IdAlbum, ArtistasInvitados) VALUES
 ('C028', 'AL014', NULL),
 ('C029', 'AL016', 'Daft Punk'),
 ('C030', 'AL016', NULL);
+
+
+
+-- Actualizamos las rutas de los artistas con los nombres de archivo que tienes
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/1. Bad Bunnyimages.jfif' WHERE IdArtista = 'A001';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/2. Taylor Swiftimages.jfif' WHERE IdArtista = 'A002';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/3.Feidimages.jfif' WHERE IdArtista = 'A003';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/4. Dua Lipaimages.jfif' WHERE IdArtista = 'A004';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/5. Karol Gimages.jfif' WHERE IdArtista = 'A005';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/6. The Weekndimages.jfif' WHERE IdArtista = 'A006';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/7. Bizarrapimages.jfif' WHERE IdArtista = 'A007';
+UPDATE Artista SET Imagen = 'src/imagenes/artistas/8. Quevedoimages.jfif' WHERE IdArtista = 'A008';
