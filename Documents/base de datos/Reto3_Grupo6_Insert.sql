@@ -57,8 +57,35 @@ VALUES ('C001', '2026-12-31');
 
 -- AUDIO
 INSERT INTO Audio (IdAudio, Nombre, Duracion, NReproducciones, Archivo, Tipo)
-VALUES ('AU001', 'Cancion Demo', 210, 0, NULL, 'cancion');
-
+VALUES 
+('C001', 'Neon Sunrise', 210, 0, NULL, 'cancion'),
+('C002', 'Vocal Drift', 185, 0, NULL, 'cancion'),
+('C003', 'Midnight Synth', 200, 0, NULL, 'cancion'),
+('C004', 'Cyber Pulse Main', 240, 0, NULL, 'cancion'),
+('C005', 'Binary Rain', 190, 0, NULL, 'cancion'),
+('C006', 'Pop Dreamer', 180, 0, NULL, 'cancion'),
+('C007', 'Sweet Echo', 210, 0, NULL, 'cancion'),
+('C008', 'Shine Bright', 195, 0, NULL, 'cancion'),
+('C009', 'Heavy Impact', 250, 0, NULL, 'cancion'),
+('C010', 'Metal Roots', 230, 0, NULL, 'cancion'),
+('C011', 'Iron Will', 220, 0, NULL, 'cancion'),
+('C012', 'Street Anthem', 170, 0, NULL, 'cancion'),
+('C013', 'City Flow', 190, 0, NULL, 'cancion'),
+('C014', 'Urban Night', 205, 0, NULL, 'cancion'),
+('C015', 'Blue Jazz Melodies', 310, 0, NULL, 'cancion'),
+('C016', 'Sax Solo', 280, 0, NULL, 'cancion'),
+('C017', 'Thunder Riff', 245, 0, NULL, 'cancion'),
+('C018', 'Electric Storm', 235, 0, NULL, 'cancion'),
+('C019', 'Future Step', 195, 0, NULL, 'cancion'),
+('C020', 'Digital Beat', 185, 0, NULL, 'cancion'),
+('C021', 'Summer Pop', 175, 0, NULL, 'cancion'),
+('C022', 'Sun Glow', 190, 0, NULL, 'cancion'),
+('C023', 'Fusion Bass', 215, 0, NULL, 'cancion'),
+('C024', 'Urban Legend Track', 180, 0, NULL, 'cancion'),
+('C025', 'Infinite Jazz', 290, 0, NULL, 'cancion'),
+('C026', 'Chaos Theory', 240, 0, NULL, 'cancion'),
+('C027', 'Pop Galaxy', 195, 0, NULL, 'cancion'),
+('C028', 'Horizon Line', 220, 0, NULL, 'cancion');
 -- PODCAST
 INSERT INTO Podcast (IdAudio, NColaboradores, IdPodcaster)
 VALUES ('AU001', 2, 'P001');
@@ -98,7 +125,6 @@ VALUES
 ('AL029','Pop Universe',2022,'Pop','https://tinyurl.com/alb-30','A002'),
 ('AL030','Rock Horizon',2021,'Rock','https://tinyurl.com/alb-31','A003');
 
--- CANCION
 INSERT INTO Cancion (IdCancion, IdAlbum, ArtistasInvitados)
 VALUES
 ('C001', 'AL0031', NULL),
@@ -130,14 +156,20 @@ VALUES
 ('C027', 'AL029', 'DJ Nova'),
 ('C028', 'AL030', NULL);
 
--- PLAYLIST
-INSERT INTO Playlist (IdList, Titulo, FechaCreacion, IdCliente)
-VALUES (1, 'Favoritas', '2026-04-28', 'C001');
-
--- PLAYLIST_CANCIONES
+-- Metemos una selección de canciones en la Playlist 'Favoritas' (IdList = 1)
 INSERT INTO Playlist_Canciones (IdList, IdCancion, FechaPlaylist_Cancion)
-VALUES (1, 'C001', '2026-04-28');
+VALUES 
+(1, 'C001', '2026-04-28'),
+(1, 'C002', '2026-04-28'),
+(1, 'C004', '2026-04-29'),
+(1, 'C006', '2026-04-29'),
+(1, 'C009', '2026-04-30'),
+(1, 'C012', '2026-05-01'),
+(1, 'C015', '2026-05-02'),
+(1, 'C017', '2026-05-03'),
+(1, 'C021', '2026-05-04'),
+(1, 'C025', '2026-05-05');
 
--- GUSTOS
+-- GUSTOS (Actualizado para usar C001)
 INSERT INTO Gustos (IdCliente, IdAudio)
-VALUES ('C001', 'AU001');
+VALUES ('C001', 'C001');
