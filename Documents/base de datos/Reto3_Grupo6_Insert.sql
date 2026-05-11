@@ -231,3 +231,53 @@ UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlmub(AL005)descarga.jfif' WHERE
 UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlmub(AL006)descarga.jfif' WHERE IdAlbum = 'AL006';
 UPDATE Album SET Imagen = 'src/Imagenes/Album/IdAlbum(AL007)descarga.jfif' WHERE IdAlbum = 'AL007';
 UPDATE Album SET Imagen = 'src/Imagenes/Album/idalbum(AL008)descarga.jfif' WHERE IdAlbum = 'AL008';
+
+  --   -----------------LOS AUDIOS ACTUALIZADO---------------------------
+use grupo6_reto3_dam;
+
+-- Bad Bunny
+UPDATE Audio SET Archivo = 'src/canciones/monaco.mp3' WHERE IdAudio = 'C001';
+UPDATE Audio SET Archivo = 'src/canciones/perronegro.mp3' WHERE IdAudio = 'C002';
+UPDATE Audio SET Archivo = 'src/canciones/meportobonito.mp3' WHERE IdAudio = 'C017';
+UPDATE Audio SET Archivo = 'src/canciones/TitíMePreguntó.mp3' WHERE IdAudio = 'C018';
+
+UPDATE Audio SET Archivo = 'src/canciones/ojitoslindos.mp3' WHERE IdAudio = 'C019';
+
+-- Taylor Swift
+UPDATE Audio SET Archivo = 'src/canciones/antihero.mp3' WHERE IdAudio = 'C003';
+UPDATE Audio SET Archivo = 'src/canciones/cruelsummer.mp3' WHERE IdAudio = 'C004';
+UPDATE Audio SET Archivo = 'src/canciones/shakeitoff.mp3' WHERE IdAudio = 'C020';
+UPDATE Audio SET Archivo = 'src/canciones/blankspace.mp3' WHERE IdAudio = 'C021';
+
+-- Feid
+UPDATE Audio SET Archivo = 'src/canciones/luna.mp3' WHERE IdAudio = 'C005';
+UPDATE Audio SET Archivo = 'src/canciones/bubalu.mp3' WHERE IdAudio = 'C006';
+UPDATE Audio SET Archivo = 'src/canciones/normal.mp3' WHERE IdAudio = 'C022';
+UPDATE Audio SET Archivo = 'src/canciones/ferxxo100.mp3' WHERE IdAudio = 'C023';
+UPDATE Audio SET Archivo = 'src/canciones/felizcumple.mp3' WHERE IdAudio = 'C024';
+UPDATE Audio SET Archivo = 'src/canciones/prohibidox.mp3' WHERE IdAudio = 'C025';
+
+-- Dua Lipa
+UPDATE Audio SET Archivo = 'src/canciones/houdini.mp3' WHERE IdAudio = 'C007';
+UPDATE Audio SET Archivo = 'src/canciones/trainingseason.mp3' WHERE IdAudio = 'C008';
+UPDATE Audio SET Archivo = 'src/canciones/levitating.mp3' WHERE IdAudio = 'C026';
+UPDATE Audio SET Archivo = 'src/canciones/dontstartnow.mp3' WHERE IdAudio = 'C027';
+UPDATE Audio SET Archivo = 'src/canciones/physical.mp3' WHERE IdAudio = 'C028';
+
+-- The Weeknd
+UPDATE Audio SET Archivo = 'src/canciones/starboy.mp3' WHERE IdAudio = 'C011';
+UPDATE Audio SET Archivo = 'src/canciones/saveyourtears.mp3' WHERE IdAudio = 'C012';
+UPDATE Audio SET Archivo = 'src/canciones/ifeelitcoming.mp3' WHERE IdAudio = 'C029';
+UPDATE Audio SET Archivo = 'src/canciones/reminder.mp3' WHERE IdAudio = 'C030';
+
+-- Otros (Karol G, Shakira, Quevedo)
+UPDATE Audio SET Archivo = 'src/canciones/provenza.mp3' WHERE IdAudio = 'C009';
+UPDATE Audio SET Archivo = 'src/canciones/tqg.mp3' WHERE IdAudio = 'C010';
+UPDATE Audio SET Archivo = 'src/canciones/shakira53.mp3' WHERE IdAudio = 'C013';
+UPDATE Audio SET Archivo = 'src/canciones/gardensession.mp3' WHERE IdAudio = 'C014';
+UPDATE Audio SET Archivo = 'src/canciones/columbia.mp3' WHERE IdAudio = 'C015';
+UPDATE Audio SET Archivo = 'src/canciones/puntog.mp3' WHERE IdAudio = 'C016';
+
+
+
+
