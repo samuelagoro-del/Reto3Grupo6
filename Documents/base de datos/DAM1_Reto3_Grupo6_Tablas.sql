@@ -1,5 +1,5 @@
 -- create database Grupo6_Reto3_dam collate utf8mb4_spanish_ci;
--- grant all on empresa_nueva_dam.* to dam;
+-- grant all on Grupo6_Reto3_dam.* to dam;
  use Grupo6_Reto3_dam;
 
 
