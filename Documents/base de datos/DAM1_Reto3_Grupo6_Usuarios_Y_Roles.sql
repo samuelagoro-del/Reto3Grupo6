@@ -1,5 +1,4 @@
 -- creacion de usuarios
-
 create user Administrador identified by 'Admin';
 
 create user Salomon identified by '123';
