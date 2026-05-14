@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Beat - Perfil Artista</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="pagina-principal">
+
+    <header class="glass-header">
+        <div class="logo-mini">
+            <img src="img/logo.png" alt="Flame Beat">
+            <span>FLAME BEAT</span>
+        </div>
+
+        <div class="search-bar disabled-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="buscador" placeholder="Búsqueda deshabilitada en perfiles..." disabled>
+        </div>
+    </header>
+
+    <nav class="glass-menu">
+        <ul>
+            <li><a href="PaginaPrincipal.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+            <li class="active"><a href="PaginaPrincipal.html"><i class="fa-solid fa-users"></i> ARTISTAS</a></li>
+            <li><a href="#" id="link-canciones"><i class="fa-solid fa-music"></i> CANCIONES</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-principal glass-card perfil-artista">
+
+        <div class="breadcrumbs">
+            <a href="PaginaPrincipal.html" class="link-naranja">Artistas</a>
+            <span class="separador">&gt;</span>
+            <span class="artista-actual" id="bread-nombre">Cargando...</span>
+        </div>
+
+        <section class="perfil-top">
+
+            <div class="perfil-imagen">
+                <img id="perfil-img" src="" alt="Imagen del artista">
+            </div>
+
+            <div class="perfil-info">
+                <h1 class="perfil-nombre" id="perfil-nombre">CARGANDO...</h1>
+                <h2 class="perfil-genero" id="perfil-genero">...</h2>
+
+                <div class="separador-horizontal1"></div>
+                <p class="perfil-bio" id="perfil-bio">Cargando biografía...</p>
+
+                <div class="separador-horizontal2"></div>
+                <div class="datos-rapidos">
+                    <div class="dato-rapido">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div>
+                            <span class="label">DEBUT</span>
+                            <span class="valor" id="info-debut">-</span>
+                        </div>
+                    </div>
+                    <div class="dato-rapido">
+                        <i class="fa-solid fa-music"></i>
+                        <div>
+                            <span class="label">GÉNERO</span>
+                            <span class="valor" id="perfil-genero-mini">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="perfil-albumes">
+                <div class="seccion-titulo">
+                    <h3>ÁLBUMES</h3>
+                    <div class="linea"></div>
+                </div>
+
+                <div id="contenedor-albumes" class="albumes-grid">
+                </div>
+
+                <a href="#" id="link-albumes" class="btn-ver-todos">Ver todos los álbumes <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+        </section>
+
+        <section class="perfil-bottom">
+            <div class="seccion-titulo">
+                <h3>INFORMACIÓN</h3>
+                <div class="linea"></div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fa-regular fa-id-card"></i>
+                    <div>
+                        <span class="label">Nombre real:</span>
+                        <span class="valor" id="info-nombre-real">No disponible</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span class="label">Nacionalidad:</span>
+                        <span class="valor" id="info-nacionalidad">No disponible</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <div>
+                        <span class="label">Estilo:</span>
+                        <span class="valor" id="info-estilo">No disponible</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <div>
+                        <span class="label">Nacimiento:</span>
+                        <span class="valor" id="info-nacimiento">No disponible</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-compact-disc"></i>
+                    <div>
+                        <span class="label">Discográfica:</span>
+                        <span class="valor" id="info-discografica">No disponible</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-regular fa-star"></i>
+                    <div>
+                        <span class="label">Activo desde:</span>
+                        <span class="valor" id="info-activo">No disponible</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 FLAME BEAT | <span class="naranja">@flamebeat@gmail.com</span> | <span class="naranja">923348014</span></p>
+    </footer>
+
+    <script src="js/paginaArtista.js"></script>
+</body>
+
+</html>

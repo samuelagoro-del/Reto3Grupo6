@@ -1,0 +1,1494 @@
+/* =========================================
+   1. CONFIGURACIÓN GLOBAL Y BODY
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('../img/FondoNaranja.jpeg') no-repeat center center/cover fixed;
+    overflow-x: hidden; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   2. ESTILOS DE LOGIN
+   ========================================= */
+.glass-card {
+    background: rgba(255, 255, 255, 0.144) !important; 
+    backdrop-filter: blur(7px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    border-radius: 20px;
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+}
+
+.logo img{
+    width: 150px; 
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(1028%) hue-rotate(320deg) brightness(101%) contrast(101%) drop-shadow(0 0 8px orange);
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #ffb37a;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    font-size: 35px;
+    filter: drop-shadow(0 0 10px orange);
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 45px;
+    padding: 12px 12px 12px 40px;
+    background: rgba(5, 5, 5, 0.418);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    font-size: 17px;
+}
+
+.icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    filter: brightness(0) saturate(100%) invert(60%) sepia(90%) saturate(2000%) hue-rotate(5deg);
+    opacity: 0.9;
+}
+
+button {
+    width: 100%;
+    height: 60px;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(180deg, #bd3600e3, #420000e3);
+    border: 1px solid rgba(214, 96, 0, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 20px rgba(255,140,0,0.8);
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   3. PÁGINA PRINCIPAL (ARTISTAS)
+   ========================================= */
+.pagina-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.glass-header {
+    width: 90.5%;
+    height: 150px; 
+    margin: 20px auto 15px auto;
+    padding: 0 30px;
+    background: rgba(255, 255, 255, 0.11) !important; 
+    backdrop-filter: blur(7px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+.logo-mini {
+    display: flex;
+    align-items: center;
+}
+
+.logo-mini span {
+    color: #ffb37a;
+    font-size: 37px; 
+    font-weight: bold;
+    letter-spacing: 4px;
+    filter: drop-shadow(0 0 10px orange);
+    margin-left: 30px; 
+}
+
+.logo-mini img {
+    width: 85px; 
+    height: auto;
+    filter: brightness(0) saturate(100%) invert(85%) sepia(21%) saturate(1028%) hue-rotate(320deg) brightness(101%) contrast(101%) drop-shadow(0 0 8px orange);
+}
+
+.search-bar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 8px 15px; /* Reducimos un poco el padding lateral */
+    width: 30%;        /* Bajamos de 35% a 30% */
+    max-width: 400px;  /* Le ponemos un tope para que no crezca demasiado en pantallas gigantes */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box; /* Asegura que el padding no sume ancho extra */
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: white;
+    padding-left: 10px;
+    outline: none;
+    width: 100%; /* Se adapta al tamaño del padre (.search-bar) */
+    font-size: 16px;
+    min-width: 0; /* Evita que el navegador le asigne un ancho mínimo por defecto */
+}
+
+.search-bar i {
+    color: #ff8c00;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   4. CAJA GRANDE (CUERPO PRINCIPAL)
+   ========================================= */
+.contenedor-principal {
+    width: 90.5%;
+    background: rgba(255, 255, 255, 0.11) !important; 
+    backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    border-radius: 20px;
+    padding: 30px;
+    flex-grow: 1; 
+    margin: 0 auto 85px auto; 
+    display: flex;
+    flex-direction: column;
+    
+    /* CAMBIO CLAVE: Cambia 'hidden' por 'auto' para activar el scroll */
+    overflow-y: auto; 
+}
+
+/* Aplicamos el mismo estilo de scrollbar que tienes en la otra página */
+.contenedor-principal::-webkit-scrollbar {
+    width: 6px;
+}
+.contenedor-principal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.contenedor-principal::-webkit-scrollbar-thumb {
+    background: rgba(255, 140, 0, 0.6);
+    border-radius: 10px;
+}
+
+.titulo-seccion {
+    color: white;
+    font-size: 34px; 
+    margin-bottom: 30px;
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.grid-artistas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px; 
+    width: 100%;
+    overflow-y: auto; 
+    padding-right: 10px; 
+}
+
+.grid-artistas::-webkit-scrollbar {
+    width: 6px;
+}
+.grid-artistas::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.grid-artistas::-webkit-scrollbar-thumb {
+    background: rgba(255, 140, 0, 0.6);
+    border-radius: 10px;
+}
+.grid-artistas::-webkit-scrollbar-thumb:hover {
+    background: #ff8c00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   5. TARJETAS (ESTILO IMAGEN)
+   ========================================= */
+.card-artista {
+    background: rgba(44, 44, 44, 0.22) !important;
+    backdrop-filter: blur(5px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px; 
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card-artista:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.card-artista img {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+    object-fit: cover;
+}
+
+.info-artista {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+}
+
+.info-artista h3 {
+    font-size: 1.4rem; 
+    color: white;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.info-artista p {
+    font-size: 1rem; 
+    color: #ffb37a;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.play-icon {
+    margin-left: auto;
+    color: #ff8c00;
+    font-size: 1.8rem; 
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.card-artista:hover .play-icon {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   6. FOOTER
+   ========================================= */
+.glass-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90.5%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.11) !important; 
+    backdrop-filter: blur(7px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    border-bottom: none; 
+    border-radius: 20px 20px 0px 0px;
+    color: white;
+    text-align: center;
+    z-index: 1000;
+    height: 50px;
+}
+
+.glass-footer .naranja {
+    color: #ffb37a;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   7. MENÚ DE NAVEGACIÓN Y BÚSQUEDA BLOQUEADA
+   ========================================= */
+.glass-menu {
+    width: 90.5%;
+    background: rgba(255, 255, 255, 0.11) !important; 
+    backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    border-radius: 15px;
+    margin: -10px auto 15px auto;
+    padding: 0 30px;
+}
+
+.glass-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.glass-menu li {
+    padding: 15px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.glass-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.glass-menu li.active {
+    border-bottom: 3px solid #ff8c00;
+}
+
+.glass-menu li.active a {
+    color: #ff8c00;
+}
+
+.disabled-search {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.disabled-search input {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   8. PERFIL DEL ARTISTA (DISEÑO INTERNO)
+   ========================================= */
+
+.perfil-artista {
+    padding: 30px 40px 60px 40px; /* Aumentamos el padding inferior de 30px a 60px */
+    display: flex;
+    flex-direction: column;
+}
+
+.breadcrumbs {
+    width: 100%;
+    margin: 0 0 20px 0;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+    padding-bottom: 15px;
+    margin-top: -10px;
+}
+
+.breadcrumbs .link-naranja {
+    color: #ff8c00;
+    text-decoration: none;
+}
+
+.breadcrumbs .separador {
+    color: white;
+    margin: 0 8px;
+}
+.breadcrumbs .separador2 {
+    color: rgba(255, 255, 255, 0.459);
+    margin: 0 8px;
+}
+
+.breadcrumbs .artista-actual {
+    color: white;
+}
+
+.breadcrumbs .canciones-actual {
+    color: rgba(255, 255, 255, 0.459);
+}
+
+/* --- SECCIÓN SUPERIOR (Foto, Bio y Álbumes) --- */
+.perfil-top {
+    display: grid;
+    /* Foto: 400px (antes 320px), Bio: crece flexiblemente (1.2fr), Álbumes: fijo (350px) */
+    grid-template-columns: 400px 600px 1fr;
+    gap: 35px; /* Un poco más de aire entre bloques */
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+.perfil-info {
+    text-align: left; /* Aseguramos que todo el bloque esté a la izquierda */
+}
+
+.perfil-imagen img {
+    width: 75%;
+    aspect-ratio: 1 / 1; /* Esto fuerza a que sea un cuadrado perfecto siempre */
+    height: auto;        /* Deja que la altura se calcule sola basándose en el ancho */
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 140, 0, 0.6);
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.4);
+}
+
+.perfil-nombre {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+}
+
+.perfil-genero {
+    color: #ff8c00;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+/* Líneas separadoras de la info central */
+.separador-horizontal1 {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 140, 0, 0.3);
+    margin: 20px 0;
+}
+
+.separador-horizontal2 {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.295);
+    margin: 20px 0;
+}
+
+.perfil-bio {
+    color: #e0e0e0;
+    line-height: 1.8; /* Más espacio entre líneas para lectura fácil */
+    font-size: 16px;   /* Subimos de 16px a 18px */
+    margin: 0;
+    text-align: left;
+    max-width: 100%; 
+}
+
+.datos-rapidos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los datos se ajusten en varias filas si no caben en una sola */
+    gap: 20px;
+}
+
+.dato-rapido {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dato-rapido i {
+    color: #ff8c00;
+    font-size: 30px;
+}
+
+.dato-rapido .label {
+    display: block;
+    color: #ff8c00;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+}
+
+.dato-rapido .valor {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* --- TÍTULOS CON LÍNEAS (Para Álbumes e Información) --- */
+.seccion-titulo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.seccion-titulo h3 {
+    color: #ff8c00;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.seccion-titulo .linea {
+    flex-grow: 1;
+    height: 1px;
+    background: rgba(255, 140, 0, 0.4);
+}
+
+/* --- ÁLBUMES --- */
+.perfil-albumes {
+    width: 70%;
+    max-width: 500px; /* Evita que crezcan infinito en pantallas enormes */
+    justify-self: center; /* Los empuja hacia la derecha del contenedor */
+}
+
+.albumes-grid {
+    display: flex;
+    gap: 25px; /* Un poco más de espacio entre portadas */
+}
+
+.album-card {
+    flex: 1;
+}
+
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px; /* Un poco más redondeado como la original */
+    margin-bottom: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6); /* Sombra más profunda */
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s ease;
+}
+
+.album-card img:hover {
+    transform: scale(1.05);
+}
+
+.album-card h4 {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.album-card p {
+    color: #aaa;
+    font-size: 12px;
+    margin: 0;
+}
+
+.btn-ver-todos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 8px;
+    color: #ff8c00;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.btn-ver-todos:hover {
+    background: rgba(255, 140, 0, 0.1);
+    border-color: #ff8c00;
+}
+
+/* --- SECCIÓN INFERIOR (INFORMACIÓN DETALLADA) --- */
+.perfil-bottom {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px 30px;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-item i {
+    color: #ff8c00;
+    font-size: 24px;
+    margin-top: 5px;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item .label {
+    display: block;
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.info-item .valor {
+    color: white;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   NUEVA SECCIÓN: PÁGINA DE CANCIONES (VERSIÓN MAXI-GIGANTE)
+   ============================================================ */
+
+/* 1. Tarjeta alineada con Header y Menú */
+.tarjeta-gigante {
+    width: 90.5%;
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: none; 
+    box-sizing: border-box; 
+    height: 82vh; 
+}
+
+/* 2. Contenido proporcionalmente más grande */
+.contenido-tres-columnas {
+    display: grid;
+    grid-template-columns: minmax(220px, 290px) 1fr minmax(220px, 320px); /* Columnas laterales más anchas */
+    gap: 3vw; /* Más espacio entre bloques */
+    height: 100%;
+    overflow: hidden;
+}
+
+.columna-interna {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll-interno {
+    overflow-y: auto;
+    padding-right: 20px;
+    flex: 1;
+}
+
+/* --- COLUMNA IZQUIERDA: ÁLBUMES (MÁS GRANDES) --- */
+.col-albumes h3 {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #ff8c00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Espacio extra para que la primera portada no choque */
+}
+
+.col-albumes h3::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #ff8c00;
+    margin-left: 15px;
+    opacity: 0.5;
+}
+
+#contenedor-albumes-izq {
+    padding-left: 20px; /* Espacio para que la foto sobresalga a la izquierda */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.album-card-estilo-nuevo {
+    display: flex;
+    align-items: center;
+    background: rgba(25, 25, 25, 0.8); /* Fondo oscuro sólido como la captura */
+    border-radius: 15px;
+    height: 100px;
+    position: relative;
+    padding-right: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.portada-flotante {
+    width: 110px;
+    height: 110px;
+    margin-left: -20px; /* Efecto sobresaliente */
+    flex-shrink: 0;
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.6));
+}
+
+.portada-flotante img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.album-card-info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.album-card-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+    text-align: left;
+}
+
+.album-card-info .anio {
+    color: #a1a1a1;
+    font-size: 14px;
+    margin: 2px 0;
+    text-align: left;
+}
+
+.album-card-info .num-canciones {
+    color: #a1a1a1;
+    font-size: 13px;
+    margin: 0;
+    text-align: left; /* Ajustado a la izquierda */
+}
+
+/* --- COLUMNA CENTRAL: CANCIONES (ARREGLO BREADCRUMB) --- */
+.titulo-canciones-dinamico {
+    text-align: left;
+    font-size: 25px; /* Título imponente */
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: 0px;
+}
+
+.cancion-fila {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px; /* Más aire en cada fila */
+    background: #262625;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    transition: 0.3s;
+}
+.cancion-fila:hover {
+    background: #0a0a09;
+    cursor: pointer;
+}
+.foto-cancion {
+    width: 45px;
+    height: auto;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.posicion-numero {
+    font-size: 15px;
+    width: 40px;
+    color: rgb(253, 253, 253); 
+}
+
+.info-cancion {
+    flex-grow: 1; 
+    margin-left: 15px;
+}
+
+.info-cancion h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.info-cancion p {
+    font-size: 14px; 
+    color: #ffbc6a;
+    text-align: left;
+}
+.duracion-txt {
+    font-size: 16px;
+    color: #ffffff;
+    margin-left: auto;
+    text-align: right;
+}
+
+.play-orange { 
+    width: 35px; /* Un poco más grande para que sea clickable */
+    height: 35px;
+    font-size: 14px;
+    background: #ff8c00;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; /* Separación de la duración */
+    transition: transform 0.2s;
+}
+
+.play-orange:hover {
+    transform: scale(1.1);
+    background: #ffae42;
+}
+
+/* --- COLUMNA DERECHA: BIO (MÁS PROPORCIONAL) --- */
+.foto-autor {
+    width: 100%;/* Ocupará el 100% de su contenedor... */
+    max-width: 260px; /* ...pero nunca será más grande de 260px */
+    aspect-ratio: 1/1; /* Mantiene el cuadrado perfecto automáticamente */
+    object-fit: cover; /* Evita que la foto se deforme */
+    border-radius: 15px;
+    align-self: center;
+}
+#artista-nombre-bio {
+    font-size: 30px;
+    color: #e0e0e0;
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+.bio-genero {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff8c00;
+    margin-bottom: 15px;
+}
+.bio-texto {
+    font-size: 12px;
+    padding-bottom: 30px;
+    color: #e0e0e0bb;
+    text-align: left;
+}
+/* Scrollbar más visible para tarjetas grandes */
+.scroll-interno::-webkit-scrollbar { width: 8px; }
+.scroll-interno::-webkit-scrollbar-thumb { background: #ff8c00; border-radius: 10px; }
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   CONFIGURACIÓN PARA MÓVIL (SIMULACIÓN WEB OFICIAL)
+   ============================================================ */
+
+@media (max-width: 900px) {
+    /* 1. LIBERAMOS EL SCROLL DE LA PÁGINA */
+    body {
+        height: auto !important;
+        overflow-y: auto !important; /* El scroll ahora es el de toda la vida */
+        display: block !important;    /* Quitamos el flex centrado de PC */
+    }
+
+    /* 2. HEADER Y MENÚ (No fijos, suben con el scroll) */
+    .glass-header {
+        position: relative !important; /* Deja de estar fijo o bloqueado */
+        width: 95% !important;
+        height: 100px !important;
+        margin: 10px auto !important;
+        flex-direction: column !important; /* Logo arriba, buscador (si hubiera) abajo */
+        justify-content: center !important;
+        padding: 10px !important;
+    }
+
+    .logo-mini span {
+        font-size: 22px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .logo-mini img {
+        width: 45px !important;
+    }
+
+    .search-bar {
+        display: none !important; /* En móviles quitamos la barra deshabilitada para limpiar */
+    }
+
+    .glass-menu {
+        position: relative !important;
+        width: 95% !important;
+        margin: 10px auto !important;
+        padding: 10px !important;
+    }
+
+    .glass-menu ul {
+        justify-content: space-around !important;
+        gap: 0 !important;
+    }
+
+    .glass-menu li a {
+        font-size: 12px !important;
+    }
+
+    /* 3. LA TARJETA GIGANTE (Sin límites de altura) */
+    .tarjeta-gigante {
+        position: relative !important;
+        width: 95% !important;
+        margin: 10px auto !important;
+        height: auto !important;        /* Ocupa lo que tenga que ocupar */
+        max-height: none !important;    /* Sin topes */
+        overflow: visible !important;   /* No hay scroll interno */
+        padding: 20px !important;
+    }
+
+    .contenido-tres-columnas {
+        display: flex !important;
+        flex-direction: column !important; /* Todo uno debajo de otro */
+        gap: 40px !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Orden lógico: Bio -> Canciones -> Álbumes */
+    .col-bio { order: 1; text-align: center; }
+    .col-canciones { order: 2; }
+    .col-albumes { order: 3; }
+
+    /* Forzamos que las columnas no intenten tener scroll */
+    .columna-interna, .scroll-interno {
+        height: auto !important;
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    /* 4. ARREGLO DE CANCIONES (En una sola línea limpia) */
+    @media (max-width: 900px) {
+    /* --- AJUSTE MAESTRO DE FILA DE CANCIÓN --- */
+    .cancion-fila {
+        width: 105% !important;
+        box-sizing: border-box !important; /* Vital para que el padding no sume ancho */
+        padding-left: 5px !important;     /* Espacio mínimo izquierda */
+        padding-right: 5px !important;    /* Espacio mínimo derecha (igual que el izquierdo) */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex !important;
+        justify-content: space-between !important; /* Fuerza a los extremos a separarse */
+    }
+
+    /* 1. El número: lo pegamos a la izquierda */
+    .posicion-numero {
+        width: 15px !important; 
+        font-size: 11px !important;
+        margin-right: 0 !important;
+        flex-shrink: 0;
+    }
+
+    /* 2. La imagen: pequeña y pegada al texto */
+    .foto-cancion {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 4px !important;
+        flex-shrink: 0;
+        margin-right: 2px !important; /* Muy pegada al título */
+    }
+
+    /* 3. El contenedor de texto: Prioridad absoluta */
+    .info-cancion {
+        flex: 1 !important; 
+        min-width: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0 !important; /* Título y álbum bien juntos */
+        margin-left: 8px !important;
+        margin-right: 10px !important; /* Espacio antes de la duración */
+    }
+
+    .info-cancion h4 {
+        font-size: 13.5px !important; /* Un pelín más grande para que destaque */
+        line-height: 1.1 !important;
+        white-space: normal !important; /* Permite dos líneas si es necesario */
+        word-wrap: break-word !important;
+        color: #ffffff;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .info-cancion p {
+        font-size: 10px !important;
+        opacity: 0.6;
+        margin: 0 !important;
+    }
+
+    /* 4. Duración: Empujada totalmente a la derecha */
+    .duracion-txt {
+        font-size: 11px !important;
+        margin-left: auto !important; /* Este es el truco para mandarla a la derecha */
+        padding-right: 4px;
+        flex-shrink: 0;
+        color: #bbb;
+        
+    }
+
+    /* 5. Botón Play: Más pequeño y discreto */
+    .play-orange {
+        width: 24px !important;   /* Lo bajamos de 28px a 24px */
+        height: 24px !important;
+        min-width: 24px !important;
+        font-size: 10px !important; /* Icono más pequeño */
+        flex-shrink: 0;
+        background: #ff8c00 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+    /* 5. FOOTER (Al final del todo, no fijo) */
+    .glass-footer {
+        position: relative !important; /* Se mueve con el contenido */
+        bottom: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 95% !important;
+        margin: 30px auto 10px auto !important;
+        height: auto !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.295) !important;
+    }
+}
+
+
+
+
+
+
+
+/* ============================================================
+   CONFIGURACIÓN PARA MÓVIL: PERFIL DE ARTISTA
+   ============================================================ */
+
+@media (max-width: 900px) {
+    /* 1. LIBERAMOS EL SCROLL GLOBAL */
+    body {
+        height: auto !important;
+        overflow-y: auto !important;
+        display: block !important;
+    }
+
+    /* 2. HEADER Y MENÚ (No fijos, suben con el scroll) */
+    .glass-header {
+        position: relative !important;
+        width: 95% !important;
+        height: auto !important;
+        margin: 10px auto !important;
+        padding: 15px !important;
+        flex-direction: column !important;
+    }
+
+    .logo-mini span { font-size: 20px !important; }
+    .logo-mini img { width: 40px !important; }
+    .search-bar { display: none !important; }
+
+    .glass-menu {
+        position: relative !important;
+        width: 95% !important;
+        margin: 10px auto !important;
+        padding: 10px !important;
+    }
+
+    .glass-menu ul {
+        justify-content: space-around !important;
+        gap: 0 !important;
+    }
+
+    .glass-menu li a { font-size: 11px !important; }
+
+    /* 3. LA TARJETA DEL PERFIL (Sin límites, scroll natural) */
+    .contenedor-principal.perfil-artista {
+        width: 95% !important;
+        margin: 10px auto !important;
+        height: auto !important;
+        max-height: none !important;
+        padding: 20px 15px !important; /* Ajustamos padding para móviles */
+        overflow: visible !important;
+    }
+
+    /* 4. SECCIÓN SUPERIOR (De Grid a Columna) */
+    .perfil-top {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+        grid-template-columns: none !important; /* Anulamos el grid de PC */
+    }
+
+    /* Foto del artista centrada y ajustada */
+    .perfil-imagen {
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .perfil-imagen img {
+        width: 220px !important; /* Tamaño ideal para móvil */
+        box-shadow: 0 0 20px rgba(255, 140, 0, 0.4) !important;
+    }
+
+    /* Info central centrada */
+    .perfil-info {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .perfil-nombre {
+        font-size: 32px !important;
+        text-align: center !important;
+    }
+
+    .perfil-genero { text-align: center !important; }
+
+    .perfil-bio {
+        text-align: center !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+    .datos-rapidos {
+        justify-content: center !important;
+        gap: 30px !important;
+    }
+
+    /* 5. ÁLBUMES (Aprovechando el ancho) */
+    .perfil-albumes {
+        width: 100% !important;
+        max-width: none !important;
+    }
+
+    .albumes-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 álbumes por fila en móvil */
+        gap: 15px !important;
+    }
+
+    .album-card h4 { font-size: 13px !important; }
+
+    /* 6. SECCIÓN INFERIOR (INFORMACIÓN) */
+    .perfil-bottom {
+        padding: 20px 15px !important;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr !important; /* Una información por fila */
+        gap: 20px !important;
+    }
+
+    .info-item {
+        align-items: center !important;
+    }
+
+    .info-item i { margin-top: 0 !important; }
+
+    /* 7. FOOTER (Al final, no fijo) */
+    .glass-footer {
+        position: relative !important;
+        width: 95% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+        height: auto !important;
+        text-align: center !important;
+    }
+
+    .glass-footer p { font-size: 12px !important; }
+}
+
+
+/* ============================================================
+   CONFIGURACIÓN PARA MÓVIL: EXPLORADOR DE ARTISTAS
+   ============================================================ */
+
+@media (max-width: 900px) {
+    /* 1. SCROLL GLOBAL Y LIBERTAD DE MOVIMIENTO */
+    body.pagina-principal {
+        height: auto !important;
+        overflow-y: auto !important;
+        display: block !important;
+    }
+
+    /* 2. HEADER COMPACTO (El logo arriba y el buscador debajo) */
+    .glass-header {
+        position: relative !important;
+        width: 95% !important;
+        height: auto !important; /* Dejamos que respire según contenido */
+        margin: 10px auto !important;
+        padding: 15px !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+
+    .logo-mini img {
+        width: 50px !important; /* Reducimos el logo de 85px */
+    }
+
+    .logo-mini span {
+        font-size: 24px !important; /* Reducimos el texto de 37px */
+        letter-spacing: 2px !important;
+        margin-left: 15px !important;
+    }
+
+    /* 3. BUSCADOR (Ancho completo en móvil) */
+    .search-bar {
+        width: 100% !important;
+        max-width: none !important;
+        height: 40px !important;
+    }
+
+    /* 4. CONTENEDOR PRINCIPAL (Sin scroll interno, estirado) */
+    .contenedor-principal {
+        width: 95% !important;
+        margin: 10px auto !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important; /* Matamos el scroll interno de la caja */
+        padding: 20px 10px !important; /* Padding lateral mínimo */
+    }
+
+    .titulo-seccion {
+        font-size: 22px !important; /* De 34px a 22px para que no rompa */
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 5. GRID DE ARTISTAS (Ajustado a la pantalla) */
+    .grid-artistas {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        overflow: visible !important;
+        padding-right: 0 !important; /* Quitamos el espacio del scroll antiguo */
+    }
+
+    /* 6. TARJETAS SIMÉTRICAS (Pegadas a los bordes) */
+    .card-artista {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 12px 10px !important; /* Espacio interno pequeño */
+    }
+
+    .card-content {
+        gap: 12px !important; /* Espacio entre foto e info */
+    }
+
+    .card-artista img {
+        width: 65px !important; /* Foto un poco más pequeña para móvil */
+        height: 65px !important;
+    }
+
+    .info-artista h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .info-artista p {
+        font-size: 0.9rem !important;
+    }
+
+    /* Icono de play más pequeño para no empujar */
+    .play-icon {
+        font-size: 1.4rem !important;
+    }
+
+    /* 7. FOOTER (Al final del todo) */
+    .glass-footer {
+        position: relative !important;
+        width: 95% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+        height: auto !important;
+        text-align: center !important;
+    }
+}
+
+
+
+
+
+/* ============================================================
+   CONFIGURACIÓN PARA MÓVIL: LOGIN
+   ============================================================ */
+
+@media (max-width: 900px) {
+    /* 1. CENTRADO TOTAL EN PANTALLA MÓVIL */
+    #PaginaLogin {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100vh !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. LA TARJETA (Ancho adaptable) */
+    #loginOverlay.glass-card {
+        width: 100% !important;
+        max-width: 350px !important; /* Mantenemos el tamaño pero dejamos que en pantallas muy pequeñas se encoja */
+        padding: 30px 20px !important;
+        margin: 0 !important;
+    }
+
+    /* 3. LOGO Y TÍTULO (Más compactos para ganar espacio) */
+    .logo img {
+        width: 110px !important; /* Reducimos de 150px */
+        margin-bottom: 5px !important;
+    }
+
+    #loginOverlay h1 {
+        font-size: 26px !important; /* Reducimos de 35px */
+        margin-bottom: 30px !important; /* Menos espacio muerto */
+        letter-spacing: 2px !important;
+    }
+
+    /* 4. INPUTS (Alturas cómodas para dedos) */
+    .input-box input {
+        height: 50px !important; /* Un poco más altos para facilitar el clic */
+        font-size: 16px !important;
+    }
+
+    /* 5. BOTÓN ENTRAR */
+    button#entrar {
+        height: 55px !important;
+        font-size: 22px !important; /* Reducimos el texto gigante de 27px */
+        margin-top: 5px !important;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flame Beat - Canciones</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="pagina-principal">
+
+    <header class="glass-header">
+        <div class="logo-mini">
+            <img src="img/logo.png" alt="Flame Beat">
+            <span>FLAME BEAT</span>
+        </div>
+        <div class="search-bar disabled-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="buscador" placeholder="Búsqueda deshabilitada en perfiles..." disabled>
+        </div>
+    </header>
+
+    <nav class="glass-menu">
+        <ul>
+            <li><a href="PaginaPrincipal.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
+            <li><a href="PaginaPrincipal.html"><i class="fa-solid fa-users"></i> ARTISTAS</a></li>
+            <li class="active"><a href="#"><i class="fa-solid fa-music"></i> CANCIONES</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenedor-principal glass-card tarjeta-gigante">
+        <div class="breadcrumbs">
+            <span class="link-naranja">Artistas</span>
+            <span class="separador">&gt;</span>
+            <span class="artista-actual" id="bread-nombre">Artista</span>
+            <span class="separador2">&gt;</span>
+            <span class="canciones-actual">Canciones</span>
+        </div>
+
+
+
+
+        <div class="contenido-tres-columnas">
+
+            <aside class="columna-interna col-bio">
+                <img id="artista-foto" src="" alt="Artista" class="foto-autor">
+                <h2 id="artista-nombre-bio">Artista</h2>
+                <div id="artista-genero" class="bio-genero"> </div>
+                <div id="artista-biografia" class="bio-texto">
+                </div>
+                <div class="datos-rapidos">
+                    <div class="dato-rapido">
+                        <i class="fa-solid fa-calendar"></i>
+                        <div>
+                            <span class="label">DEBUT</span>
+                            <span class="valor" id="info-debut">-</span>
+                        </div>
+                    </div>
+                    <div class="dato-rapido">
+                        <i class="fa-solid fa-music"></i>
+                        <div>
+                            <span class="label">GÉNERO</span>
+                            <span class="valor" id="info-genero">-</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="columna-interna col-canciones">
+                <h1 id="titulo-pagina-canciones" class="titulo-canciones-dinamico">CANCIONES</h1>
+
+                <div id="lista-canciones" class="scroll-interno">
+                </div>
+            </main>
+
+            <aside class="columna-interna col-albumes">
+                <h3>ÁLBUMES</h3>
+                <div id="contenedor-albumes-izq">
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 FLAME BEAT | <span class="naranja">@flamebeat@gmail.com</span> | <span class="naranja">923348014</span></p>
+    </footer>
+
+    <script src="js/canciones.js"></script>
+</body>
+
+</html>

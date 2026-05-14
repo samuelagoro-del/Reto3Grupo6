@@ -1,0 +1,804 @@
+{
+  "artistas": [
+    {
+      "id": 1,
+      "nombre": "Rosalía",
+      "genero": "Pop / Flamenco",
+      "foto": "img/artistas/Rosalia.png",
+      "biografia": "Rosalía Vila Tobella es una cantante, compositora y productora española. Ha sido aclamada mundialmente por su forma de mezclar el flamenco tradicional con ritmos urbanos, pop y experimentales, convirtiéndose en una de las artistas hispanohablantes más influyentes de la década.",
+      "debut": "2017",
+      "nombre_real": "Rosalía Vila Tobella",
+      "nacionalidad": "España",
+      "estilo": "Pop / Flamenco / Urbano",
+      "nacimiento": "25/09/1992",
+      "discografica": "Columbia Records",
+      "activo_desde": "2013 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL1",
+          "titulo": "MOTOMAMI",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/Motomami.png",
+          "canciones": [
+            { "id_cancion": "C1", "titulo": "SAOKO", "duracion": "2:17" },
+            { "id_cancion": "C2", "titulo": "BIZCOCHITO", "duracion": "1:49" },
+            { "id_cancion": "C3", "titulo": "CANDY", "duracion": "3:13" },
+            { "id_cancion": "C4", "titulo": "HENTAI", "duracion": "2:42" }
+          ]
+        },
+        {
+          "id_album": "AL2",
+          "titulo": "El Mal Querer",
+          "año": 2018,
+          "foto_album": "img/artistas/albumes/ElMalQuerer.png",
+          "canciones": [
+            { "id_cancion": "C5", "titulo": "MALAMENTE", "duracion": "2:29" },
+            { "id_cancion": "C6", "titulo": "PIENSO EN TU MIRÁ", "duracion": "3:13" },
+            { "id_cancion": "C7", "titulo": "BAGDAD", "duracion": "3:02" },
+            { "id_cancion": "C8", "titulo": "DI MI NOMBRE", "duracion": "2:42" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Bad Bunny",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/BadBunny.png",
+      "biografia": "Benito Antonio Martínez Ocasio, conocido como Bad Bunny, es un rapero, cantante y compositor puertorriqueño. Es considerado el 'Rey del Trap Latino' y uno de los artistas más exitosos del mundo, rompiendo récords de reproducciones globales.",
+      "debut": "2016",
+      "nombre_real": "Benito Antonio Martínez Ocasio",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton / Trap Latino",
+      "nacimiento": "10/03/1994",
+      "discografica": "Rimas Entertainment",
+      "activo_desde": "2016 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL3",
+          "titulo": "Un Verano Sin Ti",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/UnVeranoSinTi.png",
+          "canciones": [
+            { "id_cancion": "C9", "titulo": "Tití Me Preguntó", "duracion": "4:03" },
+            { "id_cancion": "C10", "titulo": "Me Porto Bonito", "duracion": "2:58" },
+            { "id_cancion": "C11", "titulo": "Moscow Mule", "duracion": "4:05" },
+            { "id_cancion": "C12", "titulo": "Efecto", "duracion": "3:33" }
+          ]
+        },
+        {
+          "id_album": "AL4",
+          "titulo": "YHLQMDLG",
+          "año": 2020,
+          "foto_album": "img/artistas/albumes/Yhlqmdlg.png",
+          "canciones": [
+            { "id_cancion": "C13", "titulo": "Safaera", "duracion": "4:55" },
+            { "id_cancion": "C14", "titulo": "La Difícil", "duracion": "2:43" },
+            { "id_cancion": "C15", "titulo": "Vete", "duracion": "3:12" },
+            { "id_cancion": "C16", "titulo": "Ignorantes", "duracion": "3:30" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Feid",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/Feid.png",
+      "biografia": "Salomón Villada Hoyos, más conocido como Feid o Ferxxo, es un cantante y compositor colombiano. Con su estilo único, su jerga antioqueña y el color verde como bandera, se ha convertido en uno de los referentes mundiales más importantes del reggaetón actual.",
+      "debut": "2015",
+      "nombre_real": "Salomón Villada Hoyos",
+      "nacionalidad": "Colombia",
+      "estilo": "Reggaeton / Trap",
+      "nacimiento": "19/08/1992",
+      "discografica": "Universal Music Latino",
+      "activo_desde": "2015 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL5",
+          "titulo": "INTER SHIBUYA - LA MAFIA",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/InterShibuya.png",
+          "canciones": [
+            { "id_cancion": "C17", "titulo": "Chimbita", "duracion": "2:56" },
+            { "id_cancion": "C18", "titulo": "Tengo Fe", "duracion": "2:26" },
+            { "id_cancion": "C19", "titulo": "Fumeteo", "duracion": "2:31" },
+            { "id_cancion": "C20", "titulo": "Si Tú Supieras", "duracion": "3:16" }
+          ]
+        },
+        {
+          "id_album": "AL6",
+          "titulo": "FELIZ CUMPLEAÑOS FERXXO...",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/FelizCumpleañosFerxxo.png",
+          "canciones": [
+            { "id_cancion": "C21", "titulo": "Normal", "duracion": "2:52" },
+            { "id_cancion": "C22", "titulo": "Feliz Cumpleaños Ferxxo", "duracion": "2:36" },
+            { "id_cancion": "C23", "titulo": "Prohibidox", "duracion": "2:40" },
+            { "id_cancion": "C24", "titulo": "Castigo", "duracion": "3:05" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Trueno",
+      "genero": "Hip Hop",
+      "foto": "img/artistas/Trueno.png",
+      "biografia": "Mateo Palacios Corazzina, conocido como Trueno, es un rapero y freestyler argentino. Comenzó desde muy joven en las batallas de rap (Quinto Escalón, FMS) y ha llevado el hip hop argentino a otro nivel con un sonido fresco y reivindicativo.",
+      "debut": "2017",
+      "nombre_real": "Mateo Palacios Corazzina",
+      "nacionalidad": "Argentina",
+      "estilo": "Hip Hop / Rap",
+      "nacimiento": "25/03/2002",
+      "discografica": "Sur Capital Records",
+      "activo_desde": "2014 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL7",
+          "titulo": "Bien o Mal",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/BienOMal.png",
+          "canciones": [
+            { "id_cancion": "C25", "titulo": "DANCE CRIP", "duracion": "2:58" },
+            { "id_cancion": "C26", "titulo": "FEEL ME??", "duracion": "3:01" },
+            { "id_cancion": "C27", "titulo": "ARGENTINA", "duracion": "3:20" },
+            { "id_cancion": "C28", "titulo": "TIERRA ZANTA", "duracion": "3:15" }
+          ]
+        },
+        {
+          "id_album": "AL8",
+          "titulo": "Atrevido",
+          "año": 2020,
+          "foto_album": "img/artistas/albumes/Atrevido.png",
+          "canciones": [
+            { "id_cancion": "C29", "titulo": "Mamichula", "duracion": "3:39" },
+            { "id_cancion": "C30", "titulo": "Atrevido", "duracion": "2:58" },
+            { "id_cancion": "C31", "titulo": "Sangría", "duracion": "3:10" },
+            { "id_cancion": "C32", "titulo": "Background", "duracion": "2:55" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nombre": "Lucho RK",
+      "genero": "Canary",
+      "foto": "img/artistas/LuchoRK.png",
+      "biografia": "Lucho RK es un talento emergente de las Islas Canarias que ha sabido fusionar el flow isleño con los ritmos urbanos más actuales. Su frescura le ha hecho ganar rápidamente un espacio en la escena musical española.",
+      "debut": "2021",
+      "nombre_real": "Luis",
+      "nacionalidad": "España (Islas Canarias)",
+      "estilo": "Urbano / Reggaeton",
+      "nacimiento": "2000",
+      "discografica": "Independiente",
+      "activo_desde": "2021 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL9",
+          "titulo": "Singles 2023",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/DiscoVacio.png",
+          "canciones": [
+            { "id_cancion": "C33", "titulo": "QUÉDATE", "duracion": "2:50" },
+            { "id_cancion": "C34", "titulo": "MÁS DE LO NORMAL", "duracion": "3:10" },
+            { "id_cancion": "C35", "titulo": "BENDITA", "duracion": "2:45" },
+            { "id_cancion": "C36", "titulo": "A TU LADO", "duracion": "3:05" }
+          ]
+        },
+        {
+          "id_album": "AL10",
+          "titulo": "Singles 2024",
+          "año": 2024,
+          "foto_album": "img/artistas/albumes/DiscoVacio.png",
+          "canciones": [
+            { "id_cancion": "C37", "titulo": "ESTO NO ES ROL", "duracion": "2:40" },
+            { "id_cancion": "C38", "titulo": "OTRA NOCHE", "duracion": "2:55" },
+            { "id_cancion": "C39", "titulo": "NOCHES DE MAS", "duracion": "3:12" },
+            { "id_cancion": "C40", "titulo": "AMOR DE CANARIAS", "duracion": "2:58" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Eladio Carrión",
+      "genero": "Trap",
+      "foto": "img/artistas/EladioCarrion.png",
+      "biografia": "Eladio Carrión Morales es un rapero y cantante estadounidense de ascendencia puertorriqueña. Es uno de los exponentes más respetados del Trap Latino, conocido por sus barras ingeniosas y su flow versátil.",
+      "debut": "2015",
+      "nombre_real": "Eladio Carrión Morales",
+      "nacionalidad": "Estados Unidos / Puerto Rico",
+      "estilo": "Trap Latino / Hip Hop",
+      "nacimiento": "26/11/1994",
+      "discografica": "Rimas Entertainment",
+      "activo_desde": "2015 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL11",
+          "titulo": "3MEN2 KBRN",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/3men2kbrn.png",
+          "canciones": [
+            { "id_cancion": "C41", "titulo": "Coco Chanel", "duracion": "3:28" },
+            { "id_cancion": "C42", "titulo": "Mbappé", "duracion": "2:45" },
+            { "id_cancion": "C43", "titulo": "Si La Calle Llama", "duracion": "3:15" },
+            { "id_cancion": "C44", "titulo": "Gladiador", "duracion": "3:01" }
+          ]
+        },
+        {
+          "id_album": "AL12",
+          "titulo": "SEN2 KBRN VOL. 2",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/SEN2KBRNVOL2.png",
+          "canciones": [
+            { "id_cancion": "C45", "titulo": "Hola Cómo Vas", "duracion": "3:01" },
+            { "id_cancion": "C46", "titulo": "Caras Vemos", "duracion": "2:55" },
+            { "id_cancion": "C47", "titulo": "Me Gustas Natural", "duracion": "2:44" },
+            { "id_cancion": "C48", "titulo": "HP GANG", "duracion": "2:48" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nombre": "Myke Towers",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/MykeTowers.png",
+      "biografia": "Michael Torres, conocido como Myke Towers, es un rapero y compositor puertorriqueño. Destaca por su agilidad lirical, dominando tanto el trap más duro como los ritmos más comerciales y pegadizos del reggaetón.",
+      "debut": "2016",
+      "nombre_real": "Michael Torres",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton / Trap Latino",
+      "nacimiento": "15/01/1994",
+      "discografica": "Warner Music Latina",
+      "activo_desde": "2016 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL13",
+          "titulo": "LA VIDA ES UNA",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/LaVidaEsUna.png",
+          "canciones": [
+            { "id_cancion": "C49", "titulo": "LALA", "duracion": "3:17" },
+            { "id_cancion": "C50", "titulo": "ULALA", "duracion": "3:14" },
+            { "id_cancion": "C51", "titulo": "AGUARDIENTE", "duracion": "3:33" },
+            { "id_cancion": "C52", "titulo": "CELOS", "duracion": "3:05" }
+          ]
+        },
+        {
+          "id_album": "AL14",
+          "titulo": "Easy Money Baby",
+          "año": 2020,
+          "foto_album": "img/artistas/albumes/EasyMoneyBaby.png",
+          "canciones": [
+            { "id_cancion": "C53", "titulo": "Girl", "duracion": "3:01" },
+            { "id_cancion": "C54", "titulo": "Diosa", "duracion": "3:34" },
+            { "id_cancion": "C55", "titulo": "Si Se Da", "duracion": "3:57" },
+            { "id_cancion": "C56", "titulo": "Piensan", "duracion": "2:54" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Quevedo",
+      "genero": "Canary",
+      "foto": "img/artistas/Quevedo.png",
+      "biografia": "Pedro Luis Domínguez Quevedo es un cantante y compositor español. Gracias a su distintiva voz grave y su histórica sesión con Bizarrap, posicionó la música urbana canaria en el mapa global.",
+      "debut": "2020",
+      "nombre_real": "Pedro Luis Domínguez Quevedo",
+      "nacionalidad": "España",
+      "estilo": "Reggaeton / Urbano / Trap",
+      "nacimiento": "07/12/2001",
+      "discografica": "Taste The Floor",
+      "activo_desde": "2020 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL15",
+          "titulo": "DONDE QUIERO ESTAR",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/DondeQuieroEstar.png",
+          "canciones": [
+            { "id_cancion": "C57", "titulo": "PUNTO G", "duracion": "2:31" },
+            { "id_cancion": "C58", "titulo": "VISTA AL MAR", "duracion": "3:00" },
+            { "id_cancion": "C59", "titulo": "PLAYA DEL INGLÉS", "duracion": "3:57" },
+            { "id_cancion": "C60", "titulo": "AHORA QUÉ", "duracion": "2:55" }
+          ]
+        },
+        {
+          "id_album": "AL16",
+          "titulo": "Singles",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/DiscoVacio.png",
+          "canciones": [
+            { "id_cancion": "C61", "titulo": "COLUMBIA", "duracion": "3:05" },
+            { "id_cancion": "C62", "titulo": "LA ÚLTIMA", "duracion": "2:58" },
+            { "id_cancion": "C63", "titulo": "BUENAS", "duracion": "2:40" },
+            { "id_cancion": "C64", "titulo": "NO ME DIGAS NADA", "duracion": "2:45" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "La Pantera",
+      "genero": "Canary",
+      "foto": "img/artistas/LaPantera.png",
+      "biografia": "La Pantera es uno de los artistas más destacados del movimiento urbano en las Islas Canarias. Saltó a la fama internacional junto a Quevedo y Juseph con el mega hit 'Cayó La Noche'.",
+      "debut": "2020",
+      "nombre_real": "Desconocido",
+      "nacionalidad": "España (Islas Canarias)",
+      "estilo": "Trap / Reggaeton / Urbano",
+      "nacimiento": "2001",
+      "discografica": "Independiente",
+      "activo_desde": "2020 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL17",
+          "titulo": "Singles 2021",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/DiscoVacio.png",
+          "canciones": [
+            { "id_cancion": "C65", "titulo": "Cayó La Noche", "duracion": "4:15" },
+            { "id_cancion": "C66", "titulo": "Soldados de Papel", "duracion": "3:05" },
+            { "id_cancion": "C67", "titulo": "Piel de Cordero", "duracion": "2:55" },
+            { "id_cancion": "C68", "titulo": "Andamos Ruleta", "duracion": "3:10" }
+          ]
+        },
+        {
+          "id_album": "AL18",
+          "titulo": "Singles 2022",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/DiscoVacio.png",
+          "canciones": [
+            { "id_cancion": "C69", "titulo": "La Culpa", "duracion": "2:40" },
+            { "id_cancion": "C70", "titulo": "Fuego", "duracion": "3:01" },
+            { "id_cancion": "C71", "titulo": "Mírame", "duracion": "2:50" },
+            { "id_cancion": "C72", "titulo": "Cicatrices", "duracion": "3:15" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "Duki",
+      "genero": "Trap",
+      "foto": "img/artistas/Duki.png",
+      "biografia": "Mauro Ezequiel Lombardo, Duki, es la figura principal y pionera del movimiento del Trap en Argentina. Pasó de las batallas del Quinto Escalón a llenar estadios por todo el mundo.",
+      "debut": "2017",
+      "nombre_real": "Mauro Ezequiel Lombardo",
+      "nacionalidad": "Argentina",
+      "estilo": "Trap / Drill / Reggaeton",
+      "nacimiento": "24/06/1996",
+      "discografica": "Dale Play Records",
+      "activo_desde": "2016 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL19",
+          "titulo": "Antes de Ameri",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/AntesDeAmeri.png",
+          "canciones": [
+            { "id_cancion": "C73", "titulo": "GIVENCHY", "duracion": "2:55" },
+            { "id_cancion": "C74", "titulo": "Apollo 13", "duracion": "2:48" },
+            { "id_cancion": "C75", "titulo": "Rockstar 2.0", "duracion": "3:10" },
+            { "id_cancion": "C76", "titulo": "Don't Lie", "duracion": "2:35" }
+          ]
+        },
+        {
+          "id_album": "AL20",
+          "titulo": "Desde el Fin del Mundo",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/DesdeElFinDelMundo.png",
+          "canciones": [
+            { "id_cancion": "C77", "titulo": "Malbec", "duracion": "2:55" },
+            { "id_cancion": "C78", "titulo": "Pintao", "duracion": "2:40" },
+            { "id_cancion": "C79", "titulo": "Sudor y Trabajo", "duracion": "3:01" },
+            { "id_cancion": "C80", "titulo": "Chico Estrella", "duracion": "2:50" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "Jhayco",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/JhayCortez.png",
+      "biografia": "Jesús Manuel Nieves Cortez, antes conocido como Jhay Cortez y ahora como Jhayco, es un cantante y productor. Ha escrito y producido algunos de los mayores éxitos del reggaetón moderno.",
+      "debut": "2017",
+      "nombre_real": "Jesús Manuel Nieves Cortez",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton / Trap",
+      "nacimiento": "09/04/1993",
+      "discografica": "Universal Music Latino",
+      "activo_desde": "2013 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL21",
+          "titulo": "Timelezz",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/Timelezz.png",
+          "canciones": [
+            { "id_cancion": "C81", "titulo": "Ley Seca", "duracion": "4:24" },
+            { "id_cancion": "C82", "titulo": "En Mi Cuarto", "duracion": "3:15" },
+            { "id_cancion": "C83", "titulo": "Christian Dior", "duracion": "2:55" },
+            { "id_cancion": "C84", "titulo": "Los Bo", "duracion": "3:40" }
+          ]
+        },
+        {
+          "id_album": "AL22",
+          "titulo": "Famouz",
+          "año": 2019,
+          "foto_album": "img/artistas/albumes/Famouz.png",
+          "canciones": [
+            { "id_cancion": "C85", "titulo": "No Me Conoce", "duracion": "5:09" },
+            { "id_cancion": "C86", "titulo": "911", "duracion": "3:25" },
+            { "id_cancion": "C87", "titulo": "Como Se Siente", "duracion": "3:40" },
+            { "id_cancion": "C88", "titulo": "Subiendo De Nivel", "duracion": "3:10" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "nombre": "Jay Wheeler",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/JayWheeler.png",
+      "biografia": "José Ángel López Martínez, conocido como Jay Wheeler, es 'La voz favorita'. Destaca por su estilo romántico dentro de la música urbana, conquistando a millones con letras sentimentales y melódicas.",
+      "debut": "2016",
+      "nombre_real": "José Ángel López Martínez",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton Romántico",
+      "nacimiento": "25/04/1994",
+      "discografica": "Dynamic Records",
+      "activo_desde": "2016 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL23",
+          "titulo": "Emociones",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/Emociones.png",
+          "canciones": [
+            { "id_cancion": "C89", "titulo": "Suelta", "duracion": "2:55" },
+            { "id_cancion": "C90", "titulo": "Dicelo", "duracion": "3:10" },
+            { "id_cancion": "C91", "titulo": "Eazt", "duracion": "2:45" },
+            { "id_cancion": "C92", "titulo": "Lugar Seguro", "duracion": "3:15" }
+          ]
+        },
+        {
+          "id_album": "AL24",
+          "titulo": "Platónicos",
+          "año": 2020,
+          "foto_album": "img/artistas/albumes/Platonicos.png",
+          "canciones": [
+            { "id_cancion": "C93", "titulo": "La Curiosidad", "duracion": "3:58" },
+            { "id_cancion": "C94", "titulo": "Me Enamoré", "duracion": "3:10" },
+            { "id_cancion": "C95", "titulo": "Mala Sangre", "duracion": "3:05" },
+            { "id_cancion": "C96", "titulo": "Fuiste Tú", "duracion": "3:20" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "nombre": "Anuel AA",
+      "genero": "Trap",
+      "foto": "img/artistas/AnuelAA.png",
+      "biografia": "Emmanuel Gazmey Santiago es un rapero y cantante que revolucionó el panorama urbano al popularizar el Trap Latino comercialmente, con un estilo lírico crudo, explícito y callejero.",
+      "debut": "2011",
+      "nombre_real": "Emmanuel Gazmey Santiago",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Trap Latino / Reggaeton",
+      "nacimiento": "26/11/1992",
+      "discografica": "Real Hasta la Muerte Records",
+      "activo_desde": "2011 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL25",
+          "titulo": "Las Leyendas Nunca Mueren",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/LasLeyendasNuncaMueren.png",
+          "canciones": [
+            { "id_cancion": "C97", "titulo": "McGregor", "duracion": "3:10" },
+            { "id_cancion": "C98", "titulo": "Llorando en un Ferrari", "duracion": "3:12" },
+            { "id_cancion": "C99", "titulo": "Leyenda", "duracion": "3:40" },
+            { "id_cancion": "C100", "titulo": "Súbelo", "duracion": "3:55" }
+          ]
+        },
+        {
+          "id_album": "AL26",
+          "titulo": "Real Hasta La Muerte",
+          "año": 2018,
+          "foto_album": "img/artistas/albumes/RealHastaLaMuerte.png",
+          "canciones": [
+            { "id_cancion": "C101", "titulo": "Brindemos", "duracion": "3:35" },
+            { "id_cancion": "C102", "titulo": "Quiere Beber", "duracion": "3:08" },
+            { "id_cancion": "C103", "titulo": "Hipócrita", "duracion": "3:15" },
+            { "id_cancion": "C104", "titulo": "Bandolera", "duracion": "3:10" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "nombre": "Rauw Alejandro",
+      "genero": "Pop / Reggaeton",
+      "foto": "img/artistas/RauwAlejandro.png",
+      "biografia": "Raúl Alejandro Ocasio Ruiz es un cantante y bailarín que ha sabido fusionar el R&B, la música electrónica y ritmos synth-pop con el reggaetón, creando una propuesta audiovisual única en la industria.",
+      "debut": "2014",
+      "nombre_real": "Raúl Alejandro Ocasio Ruiz",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton / Pop / R&B",
+      "nacimiento": "10/01/1993",
+      "discografica": "Duars Entertainment",
+      "activo_desde": "2014 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL27",
+          "titulo": "VICE VERSA",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/ViceVersa.png",
+          "canciones": [
+            { "id_cancion": "C105", "titulo": "Todo De Ti", "duracion": "3:19" },
+            { "id_cancion": "C106", "titulo": "Baila Conmigo", "duracion": "3:05" },
+            { "id_cancion": "C107", "titulo": "Cúrame", "duracion": "2:44" },
+            { "id_cancion": "C108", "titulo": "Desesperados", "duracion": "3:44" }
+          ]
+        },
+        {
+          "id_album": "AL28",
+          "titulo": "SATURNO",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/Saturno.png",
+          "canciones": [
+            { "id_cancion": "C109", "titulo": "PUNTO 40", "duracion": "3:10" },
+            { "id_cancion": "C110", "titulo": "LOKERA", "duracion": "3:15" },
+            { "id_cancion": "C111", "titulo": "LEJOS DEL CIELO", "duracion": "3:20" },
+            { "id_cancion": "C112", "titulo": "CORAZÓN DESPEINADO", "duracion": "3:05" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "nombre": "Tego Calderón",
+      "genero": "Reggaeton Clásico",
+      "foto": "img/artistas/TegoCalderon.png",
+      "biografia": "Tegui Calderón Rosario es considerado uno de los pilares históricos del reggaetón. 'El Abayarde' introdujo ritmos afrocaribeños, salsa y bomba en el género urbano, dándole prestigio y profundidad social.",
+      "debut": "1996",
+      "nombre_real": "Tegui Calderón Rosario",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton Clásico / Hip Hop",
+      "nacimiento": "01/02/1972",
+      "discografica": "Jiggiri Records",
+      "activo_desde": "1996 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL29",
+          "titulo": "El Abayarde",
+          "año": 2002,
+          "foto_album": "img/artistas/albumes/ElAbayarde.png",
+          "canciones": [
+            { "id_cancion": "C113", "titulo": "Pa' Que Retozen", "duracion": "3:31" },
+            { "id_cancion": "C114", "titulo": "Métele Sazón", "duracion": "4:01" },
+            { "id_cancion": "C115", "titulo": "Dominicana", "duracion": "4:10" },
+            { "id_cancion": "C116", "titulo": "Guasa Guasa", "duracion": "3:50" }
+          ]
+        },
+        {
+          "id_album": "AL30",
+          "titulo": "The Underdog",
+          "año": 2006,
+          "foto_album": "img/artistas/albumes/TheUnderdog.png",
+          "canciones": [
+            { "id_cancion": "C117", "titulo": "Los Mate", "duracion": "3:05" },
+            { "id_cancion": "C118", "titulo": "Chillin", "duracion": "3:15" },
+            { "id_cancion": "C119", "titulo": "Punto y Aparte", "duracion": "3:40" },
+            { "id_cancion": "C120", "titulo": "Llora Llora", "duracion": "3:25" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "nombre": "Daddy Yankee",
+      "genero": "Reggaeton Clásico",
+      "foto": "img/artistas/DaddyYankee.png",
+      "biografia": "Ramón Luis Ayala Rodríguez es el máximo pionero del reggaetón mundial. Conocido como 'El Big Boss', abrió las puertas del género urbano al mundo entero con himnos históricos e inmortales.",
+      "debut": "1990",
+      "nombre_real": "Ramón Luis Ayala Rodríguez",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton",
+      "nacimiento": "03/02/1977",
+      "discografica": "El Cartel Records",
+      "activo_desde": "1990 - 2023",
+      "albumes": [
+        {
+          "id_album": "AL31",
+          "titulo": "Barrio Fino",
+          "año": 2004,
+          "foto_album": "img/artistas/albumes/BarrioFino.png",
+          "canciones": [
+            { "id_cancion": "C121", "titulo": "Gasolina", "duracion": "3:12" },
+            { "id_cancion": "C122", "titulo": "Lo Que Pasó, Pasó", "duracion": "3:30" },
+            { "id_cancion": "C123", "titulo": "King Daddy", "duracion": "2:31" },
+            { "id_cancion": "C124", "titulo": "No Me Dejes Solo", "duracion": "2:50" }
+          ]
+        },
+        {
+          "id_album": "AL32",
+          "titulo": "Legendaddy",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/Legendaddy.png",
+          "canciones": [
+            { "id_cancion": "C125", "titulo": "Remix", "duracion": "2:45" },
+            { "id_cancion": "C126", "titulo": "Pasatiempo", "duracion": "3:20" },
+            { "id_cancion": "C127", "titulo": "Rumbatón", "duracion": "4:05" },
+            { "id_cancion": "C128", "titulo": "Campeón", "duracion": "3:10" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "nombre": "Mora",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/Mora.png",
+      "biografia": "Gabriel Armando Mora Quintero es un productor, cantante y compositor puertorriqueño. Ha aportado un sonido electrónico y nostálgico muy vanguardista a la escena urbana actual.",
+      "debut": "2017",
+      "nombre_real": "Gabriel Armando Mora Quintero",
+      "nacionalidad": "Puerto Rico",
+      "estilo": "Reggaeton / Trap / EDM",
+      "nacimiento": "18/04/1996",
+      "discografica": "Rimas Entertainment",
+      "activo_desde": "2017 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL33",
+          "titulo": "MICRODOSIS",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/Microdosis.png",
+          "canciones": [
+            { "id_cancion": "C129", "titulo": "MEMORIAS", "duracion": "3:01" },
+            { "id_cancion": "C130", "titulo": "LA INOCENTE", "duracion": "3:20" },
+            { "id_cancion": "C131", "titulo": "TUS LÁGRIMAS", "duracion": "3:10" },
+            { "id_cancion": "C132", "titulo": "ESCALOFRÍOS", "duracion": "2:50" }
+          ]
+        },
+        {
+          "id_album": "AL34",
+          "titulo": "PARAÍSO",
+          "año": 2022,
+          "foto_album": "img/artistas/albumes/Paraiso.png",
+          "canciones": [
+            { "id_cancion": "C133", "titulo": "DOMINGO DE BOTE", "duracion": "2:55" },
+            { "id_cancion": "C134", "titulo": "CALENTÓN", "duracion": "3:05" },
+            { "id_cancion": "C135", "titulo": "COMO HAS ESTAU", "duracion": "3:15" },
+            { "id_cancion": "C136", "titulo": "CASUALIDAD", "duracion": "3:00" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "nombre": "Karol G",
+      "genero": "Pop / Reggaeton",
+      "foto": "img/artistas/KarolG.png",
+      "biografia": "Carolina Giraldo Navarro, conocida mundialmente como 'La Bichota', es una de las figuras femeninas más grandes de la música latina. Empodera con sus letras y ritmos contagiosos.",
+      "debut": "2007",
+      "nombre_real": "Carolina Giraldo Navarro",
+      "nacionalidad": "Colombia",
+      "estilo": "Reggaeton / Pop Latino",
+      "nacimiento": "14/02/1991",
+      "discografica": "Universal Music Latino",
+      "activo_desde": "2007 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL35",
+          "titulo": "MAÑANA SERÁ BONITO",
+          "año": 2023,
+          "foto_album": "img/artistas/albumes/MañanaSeraBonito.png",
+          "canciones": [
+            { "id_cancion": "C137", "titulo": "PROVENZA", "duracion": "3:30" },
+            { "id_cancion": "C138", "titulo": "TQG", "duracion": "3:17" },
+            { "id_cancion": "C139", "titulo": "CAIRO", "duracion": "3:18" },
+            { "id_cancion": "C140", "titulo": "MIENTRAS ME CURO DEL CORA", "duracion": "2:44" }
+          ]
+        },
+        {
+          "id_album": "AL36",
+          "titulo": "KG0516",
+          "año": 2021,
+          "foto_album": "img/artistas/albumes/KG0516.png",
+          "canciones": [
+            { "id_cancion": "C141", "titulo": "BICHOTA", "duracion": "2:58" },
+            { "id_cancion": "C142", "titulo": "TUSA", "duracion": "3:20" },
+            { "id_cancion": "C143", "titulo": "EL MAKINON", "duracion": "3:29" },
+            { "id_cancion": "C144", "titulo": "AY, DiOs Mío!", "duracion": "3:09" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "nombre": "J Balvin",
+      "genero": "Reggaeton",
+      "foto": "img/artistas/JBalvin.png",
+      "biografia": "José Álvaro Osorio Balvin es un artista fundamental en la internacionalización de la música colombiana. Conocido por su estilo colorido, colaboraciones de talla mundial y hits bailables.",
+      "debut": "2009",
+      "nombre_real": "José Álvaro Osorio Balvin",
+      "nacionalidad": "Colombia",
+      "estilo": "Reggaeton / Pop Latino",
+      "nacimiento": "07/05/1985",
+      "discografica": "Universal Music Latino",
+      "activo_desde": "2009 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL37",
+          "titulo": "Colores",
+          "año": 2020,
+          "foto_album": "img/artistas/albumes/Colores.png",
+          "canciones": [
+            { "id_cancion": "C145", "titulo": "Rojo", "duracion": "2:30" },
+            { "id_cancion": "C146", "titulo": "Azul", "duracion": "3:25" },
+            { "id_cancion": "C147", "titulo": "Amarillo", "duracion": "2:37" },
+            { "id_cancion": "C148", "titulo": "Morado", "duracion": "3:20" }
+          ]
+        },
+        {
+          "id_album": "AL38",
+          "titulo": "Vibras",
+          "año": 2018,
+          "foto_album": "img/artistas/albumes/Vibras.png",
+          "canciones": [
+            { "id_cancion": "C149", "titulo": "Mi Gente", "duracion": "3:05" },
+            { "id_cancion": "C150", "titulo": "Machika", "duracion": "3:10" },
+            { "id_cancion": "C151", "titulo": "Ambiente", "duracion": "3:45" },
+            { "id_cancion": "C152", "titulo": "No Es Justo", "duracion": "4:11" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "nombre": "Maluma",
+      "genero": "Pop / Reggaeton",
+      "foto": "img/artistas/Maluma.png",
+      "biografia": "Juan Luis Londoño Arias es un ídolo global colombiano. Su música mezcla el pop comercial con el reggaetón romántico y bailable, cosechando fans masivos a nivel mundial.",
+      "debut": "2010",
+      "nombre_real": "Juan Luis Londoño Arias",
+      "nacionalidad": "Colombia",
+      "estilo": "Pop Latino / Reggaeton",
+      "nacimiento": "28/01/1994",
+      "discografica": "Sony Music Latin",
+      "activo_desde": "2010 - Presente",
+      "albumes": [
+        {
+          "id_album": "AL39",
+          "titulo": "Papi Juancho",
+          "año": 2020,
+          "foto_album": "img/artistas/albumes/PapiJuancho.png",
+          "canciones": [
+            { "id_cancion": "C153", "titulo": "Hawái", "duracion": "3:19" },
+            { "id_cancion": "C154", "titulo": "Parce", "duracion": "4:08" },
+            { "id_cancion": "C155", "titulo": "Madrid", "duracion": "3:18" },
+            { "id_cancion": "C156", "titulo": "ADMV", "duracion": "3:14" }
+          ]
+        },
+        {
+          "id_album": "AL40",
+          "titulo": "F.A.M.E.",
+          "año": 2018,
+          "foto_album": "img/artistas/albumes/Fame.png",
+          "canciones": [
+            { "id_cancion": "C157", "titulo": "Corazón", "duracion": "3:04" },
+            { "id_cancion": "C158", "titulo": "Felices los 4", "duracion": "3:49" },
+            { "id_cancion": "C159", "titulo": "El Préstamo", "duracion": "3:39" },
+            { "id_cancion": "C160", "titulo": "Marinero", "duracion": "3:09" }
+          ]
+        }
+      ]
+    }
+  ]
+}
