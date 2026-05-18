@@ -4,36 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flame Beat</title>
+    <!-- Vinculación del CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body id="PaginaLogin">
 
+<body id="PaginaLogin">
+    <!-- Tarjeta de login -->
     <div id="loginOverlay" class="glass-card">
 
+        <!--Logo de la aplicación -->
         <div class="logo">
             <img src="img/Logo.png" alt="Logo">
         </div>
 
+        <!-- Título de la aplicación -->
         <h1>FLAME BEAT</h1>
 
+        <!-- Contenedor de los campos de texto -->
         <div class="input-container">
 
+            <!-- Campo de usuario -->
             <div class="input-box">
-                <img src="img/IconoUsuario.png" class="icon" style="width: 25px; margin-left: 5px;">
+                <!-- Icono de usuario -->
+                <img src="img/IconoUsuario.png" class="icon" style="width: 25px; margin-left: 5px;" alt="Usuario">
+                <!-- Campo de texto para el usuario -->
                 <input type="text" id="usuario" placeholder="Usuario">
             </div>
 
+            <!-- Campo de contraseña -->
             <div class="input-box">
-                <img src="img/IconoContrasenia.png" class="icon" style="margin-left: 8px;">
+                <!-- Icono de contraseña -->
+                <img src="img/IconoContrasenia.png" class="icon" style="margin-left: 8px;" alt="Contraseña">
+                <!-- Campo de texto para la contraseña -->
                 <input type="password" id="password" placeholder="Contraseña">
             </div>
 
         </div>
 
+        <!-- Botón de entrada -->
         <button id="entrar">ENTRAR</button>
-
+        
+        <!-- Mensaje de error o de entrada -->
         <p id="mensaje"></p>
     </div>
+    <!-- Enlace javascript -->
     <script src="js/login.js"></script>
 </body>
 </html>

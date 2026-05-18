@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flame Beat - Artistas</title>
+    <!-- Vinculación del CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <!--librería externa para los iconos de la interfaz -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body class="pagina-principal">
 
+    <!-- cabecera superior con efecto translúcido -->
     <header class="glass-header">
+        <!-- mini logo y nombre de la marca en la cabecera -->
         <div class="logo-mini">
             <img src="img/logo.png" alt="Flame Beat">
             <span>FLAME BEAT</span>
         </div>
         
+        <!-- cuadro de búsqueda con icono de lupa -->
         <div class="search-bar">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="buscador" placeholder="Buscar artista o género...">
         </div>
     </header>
 
+    <!-- contenedor central para el contenido de la página -->
     <div class="contenedor-principal glass-card">
+        <!-- título encabezado de la sección de contenido -->
         <h2 class="titulo-seccion">ARTISTAS REGISTRADOS</h2>
         
+        <!-- contenedor en rejilla donde javascript inyectará los artistas -->
         <main id="contenedor-artistas" class="grid-artistas">
-            </main>
+        </main>
     </div>
 
+    <!-- pie de página con derechos de autor y datos de contacto -->
     <footer class="glass-footer">
         <p>&copy; 2026 FLAME BEAT | <span class="naranja">@flamebeat@gmail.com</span> | <span class="naranja">923348014</span></p>
     </footer>
 
+    <!-- enlace al archivo javascript para cargar artistas y filtrar búsquedas -->
     <script src="js/paginaPrincipal.js"></script>
 </body>
 </html>

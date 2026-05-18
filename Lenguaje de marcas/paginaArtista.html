@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flame Beat - Perfil Artista</title>
+    <!-- Vinculación del CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <!--librería externa para los iconos de la interfaz -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="pagina-principal">
 
+    <!-- cabecera superior con efecto translúcido -->
     <header class="glass-header">
+        <!-- mini logo y nombre de la marca en la cabecera -->
         <div class="logo-mini">
             <img src="img/logo.png" alt="Flame Beat">
             <span>FLAME BEAT</span>
         </div>
 
+        <!-- cuadro de búsqueda con icono de lupa -->
         <div class="search-bar disabled-search">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="buscador" placeholder="Búsqueda deshabilitada en perfiles..." disabled>
         </div>
     </header>
 
+    <!-- menú de navegación principal -->
     <nav class="glass-menu">
         <ul>
             <li><a href="PaginaPrincipal.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
@@ -31,20 +37,25 @@
         </ul>
     </nav>
 
+    <!-- contenedor de la tarjeta del perfil -->
     <div class="contenedor-principal glass-card perfil-artista">
 
+        <!-- ruta de navegación o breadcrumbs -->
         <div class="breadcrumbs">
             <a href="PaginaPrincipal.html" class="link-naranja">Artistas</a>
             <span class="separador">&gt;</span>
             <span class="artista-actual" id="bread-nombre">Cargando...</span>
         </div>
 
+        <!-- sección superior con biografía y álbumes -->
         <section class="perfil-top">
 
+            <!-- contenedor de la foto del artista -->
             <div class="perfil-imagen">
                 <img id="perfil-img" src="" alt="Imagen del artista">
             </div>
 
+            <!-- bloque de textos e info del artista -->
             <div class="perfil-info">
                 <h1 class="perfil-nombre" id="perfil-nombre">CARGANDO...</h1>
                 <h2 class="perfil-genero" id="perfil-genero">...</h2>
@@ -53,6 +64,8 @@
                 <p class="perfil-bio" id="perfil-bio">Cargando biografía...</p>
 
                 <div class="separador-horizontal2"></div>
+
+                <!-- bloque de datos rápidos con iconos -->
                 <div class="datos-rapidos">
                     <div class="dato-rapido">
                         <i class="fa-regular fa-calendar"></i>
@@ -71,27 +84,30 @@
                 </div>
             </div>
 
+            <!-- sección de discos destacados -->
             <div class="perfil-albumes">
                 <div class="seccion-titulo">
                     <h3>ÁLBUMES</h3>
                     <div class="linea"></div>
                 </div>
 
+                <!-- contenedor para inyectar álbumes por js -->
                 <div id="contenedor-albumes" class="albumes-grid">
                 </div>
 
-                <a href="#" id="link-albumes" class="btn-ver-todos">Ver todos los álbumes <i
-                        class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" id="link-albumes" class="btn-ver-todos">Ver todos los álbumes <i class="fa-solid fa-chevron-right"></i></a>
             </div>
 
         </section>
 
+        <!-- sección inferior con ficha técnica -->
         <section class="perfil-bottom">
             <div class="seccion-titulo">
                 <h3>INFORMACIÓN</h3>
                 <div class="linea"></div>
             </div>
 
+            <!-- rejilla con la información detallada -->
             <div class="info-grid">
                 <div class="info-item">
                     <i class="fa-regular fa-id-card"></i>
@@ -140,10 +156,12 @@
 
     </div>
 
+    <!-- pie de página con derechos de autor y datos de contacto -->
     <footer class="glass-footer">
         <p>&copy; 2026 FLAME BEAT | <span class="naranja">@flamebeat@gmail.com</span> | <span class="naranja">923348014</span></p>
     </footer>
 
+    <!-- enlace al archivo javascript para cargar artistas y filtrar búsquedas -->
     <script src="js/paginaArtista.js"></script>
 </body>
 

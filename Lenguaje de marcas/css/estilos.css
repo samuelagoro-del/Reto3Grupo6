@@ -33,9 +33,10 @@ body {
 
 
 
-/* =========================================
-   2. ESTILOS DE LOGIN
-   ========================================= */
+/* ==========================================================================
+   2. ESTILOS DE LA INTERFAZ DE LOGIN (Estructura y Textos)
+   ========================================================================== */
+/* Tarjeta principal con desenfoque de fondo */
 .glass-card {
     background: rgba(255, 255, 255, 0.144) !important; 
     backdrop-filter: blur(7px) !important;
@@ -46,6 +47,7 @@ body {
     text-align: center;
 }
 
+/* Ajustes de tamaño y efectos visuales para el logotipo */
 .logo img{
     width: 150px; 
     height: auto;
@@ -53,6 +55,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* Título principal con efecto de resplandor neón/naranja */
 h1 {
     color: #ffb37a;
     letter-spacing: 4px;
@@ -61,11 +64,13 @@ h1 {
     filter: drop-shadow(0 0 10px orange);
 }
 
+/* Contenedor relativo para posicionar los iconos dentro de los inputs */
 .input-box {
     position: relative;
     margin-bottom: 25px;
 }
 
+/* Estilos individuales para las cajas de texto */
 .input-box input {
     width: 100%;
     height: 45px;
@@ -78,6 +83,7 @@ h1 {
     font-size: 17px;
 }
 
+/* Estilos base comunes para ambos iconos vectoriales */
 .icon {
     position: absolute;
     left: 12px;
@@ -88,6 +94,7 @@ h1 {
     opacity: 0.9;
 }
 
+/*Estilos para el botón */
 button {
     width: 100%;
     height: 60px;
@@ -128,7 +135,7 @@ button:hover {
 
 
 /* =========================================
-   3. PÁGINA PRINCIPAL (ARTISTAS)
+   3. HEADER Y BARRA DE BÚSQUEDA
    ========================================= */
 .pagina-principal {
     width: 100%;
@@ -215,175 +222,6 @@ button:hover {
 
 
 
-
-
-
-/* =========================================
-   4. CAJA GRANDE (CUERPO PRINCIPAL)
-   ========================================= */
-.contenedor-principal {
-    width: 90.5%;
-    background: rgba(255, 255, 255, 0.11) !important; 
-    backdrop-filter: blur(10px) !important;
-    border: 2px solid rgba(255, 255, 255, 0.295);
-    border-radius: 20px;
-    padding: 30px;
-    flex-grow: 1; 
-    margin: 0 auto 85px auto; 
-    display: flex;
-    flex-direction: column;
-    
-    /* CAMBIO CLAVE: Cambia 'hidden' por 'auto' para activar el scroll */
-    overflow-y: auto; 
-}
-
-/* Aplicamos el mismo estilo de scrollbar que tienes en la otra página */
-.contenedor-principal::-webkit-scrollbar {
-    width: 6px;
-}
-.contenedor-principal::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-.contenedor-principal::-webkit-scrollbar-thumb {
-    background: rgba(255, 140, 0, 0.6);
-    border-radius: 10px;
-}
-
-.titulo-seccion {
-    color: white;
-    font-size: 34px; 
-    margin-bottom: 30px;
-    text-align: left;
-    letter-spacing: 2px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.grid-artistas {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 25px; 
-    width: 100%;
-    overflow-y: auto; 
-    padding-right: 10px; 
-}
-
-.grid-artistas::-webkit-scrollbar {
-    width: 6px;
-}
-.grid-artistas::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-.grid-artistas::-webkit-scrollbar-thumb {
-    background: rgba(255, 140, 0, 0.6);
-    border-radius: 10px;
-}
-.grid-artistas::-webkit-scrollbar-thumb:hover {
-    background: #ff8c00;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================
-   5. TARJETAS (ESTILO IMAGEN)
-   ========================================= */
-.card-artista {
-    background: rgba(44, 44, 44, 0.22) !important;
-    backdrop-filter: blur(5px) !important;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px; 
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.card-artista:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
-}
-
-.card-content {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
-}
-
-.card-artista img {
-    width: 90px; 
-    height: 90px; 
-    border-radius: 50%;
-    border: 2px solid #ff8c00;
-    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
-    object-fit: cover;
-}
-
-.info-artista {
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    text-align: left;
-}
-
-.info-artista h3 {
-    font-size: 1.4rem; 
-    color: white;
-    margin: 0;
-    letter-spacing: 0.5px;
-}
-
-.info-artista p {
-    font-size: 1rem; 
-    color: #ffb37a;
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-.play-icon {
-    margin-left: auto;
-    color: #ff8c00;
-    font-size: 1.8rem; 
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-.card-artista:hover .play-icon {
-    opacity: 1;
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 5px orange);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================
    6. FOOTER
    ========================================= */
@@ -424,10 +262,190 @@ button:hover {
 
 
 
+/* =========================================
+   4. CAJA GRANDE (PaginaPrincipal.html)
+   ========================================= */
+.contenedor-principal {
+    width: 90.5%;
+    background: rgba(255, 255, 255, 0.11) !important; 
+    backdrop-filter: blur(10px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.295);
+    border-radius: 20px;
+    padding: 30px;
+    flex-grow: 1; 
+    margin: 0 auto 85px auto; 
+    display: flex;
+    flex-direction: column;
+    
+    /* CAMBIO CLAVE: Cambia 'hidden' por 'auto' para activar el scroll */
+    overflow-y: auto; 
+}
+
+/*estilo para el titulo*/
+.titulo-seccion {
+    color: white;
+    font-size: 34px; 
+    margin-bottom: 30px;
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*organiza las tarjetas de los artistas en columnas automáticas de mínimo 350px*/
+.grid-artistas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 25px; 
+    width: 100%;
+    overflow-y: auto; 
+    padding-right: 10px; 
+}
+
+/* Scrollbar para paginaPrincipal.html*/
+.grid-artistas::-webkit-scrollbar {
+    width: 6px;
+}
+.grid-artistas::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.grid-artistas::-webkit-scrollbar-thumb {
+    background: rgba(255, 140, 0, 0.6);
+    border-radius: 10px;
+}
+.grid-artistas::-webkit-scrollbar-thumb:hover {
+    background: #ff8c00;
+}
+
+
+/* Scrollbar para paginaArtista.html*/
+.contenedor-principal::-webkit-scrollbar {
+    width: 6px;
+}
+.contenedor-principal::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.contenedor-principal::-webkit-scrollbar-thumb {
+    background: rgba(255, 140, 0, 0.6);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   5. TARJETAS (ESTILO IMAGEN)
+   ========================================= */
+/*contenedor base de la tarjeta del artista*/
+.card-artista {
+    background: rgba(44, 44, 44, 0.22) !important;
+    backdrop-filter: blur(5px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px; 
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/*efecto al pasar el cursor sobre la tarjeta*/
+.card-artista:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(255, 140, 0, 0.3);
+}
+
+/*alineación interna de los elementos de la tarjeta*/
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+/*foto de perfil del artista*/
+.card-artista img {
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+    object-fit: cover;
+}
+
+/*contenedor de los textos informativos del artista*/
+.info-artista {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+}
+
+/*nombre del artista*/
+.info-artista h3 {
+    font-size: 1.4rem; 
+    color: white;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/*género musical o descripción corta del artista*/
+.info-artista p {
+    font-size: 1rem; 
+    color: #ffb37a;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/*icono de reproductor al lado derecho*/
+.play-icon {
+    margin-left: auto;
+    color: #ff8c00;
+    font-size: 1.8rem; 
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/*efecto en el icono de play cuando se hace hover en la tarjeta*/
+.card-artista:hover .play-icon {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =========================================
    7. MENÚ DE NAVEGACIÓN Y BÚSQUEDA BLOQUEADA
    ========================================= */
+/*contenedor principal del menú con efecto glassmorphism*/
 .glass-menu {
     width: 90.5%;
     background: rgba(255, 255, 255, 0.11) !important; 
@@ -438,17 +456,20 @@ button:hover {
     padding: 0 30px;
 }
 
+/*lista del menú para alinear los elementos en horizontal*/
 .glass-menu ul {
     list-style: none;
     display: flex;
     gap: 40px;
 }
 
+/*celdas de la lista con espacio para la línea inferior del enlace*/
 .glass-menu li {
     padding: 15px 0;
     border-bottom: 3px solid transparent;
 }
 
+/*enlaces del menú*/
 .glass-menu li a {
     color: white;
     text-decoration: none;
@@ -461,20 +482,24 @@ button:hover {
     transition: 0.3s;
 }
 
+/*pestaña activa del menú - añade borde inferior naranja*/
 .glass-menu li.active {
     border-bottom: 3px solid #ff8c00;
 }
 
+/*color del texto naranja para la pestaña activa*/
 .glass-menu li.active a {
     color: #ff8c00;
 }
 
+/*barra de búsqueda desactivada*/
 .disabled-search {
     opacity: 0.4;
     cursor: not-allowed;
     background: rgba(0, 0, 0, 0.6) !important;
 }
 
+/*deshabilita cualquier interacción del usuario dentro del input de búsqueda bloqueado*/
 .disabled-search input {
     cursor: not-allowed;
     pointer-events: none;
@@ -496,7 +521,13 @@ button:hover {
 
 
 /* =========================================
-   8. PERFIL DEL ARTISTA (DISEÑO INTERNO)
+   8. PERFIL DEL ARTISTA (DISEÑO INTERNO PaginaArtista.html)
+     - Estructura general
+     - Breadcrumbs
+     - Sección superior (Foto, Bio y Álbumes)
+     - Títulos y líneas separadoras
+     - Álbumes
+     - Sección inferior (Información detallada)
    ========================================= */
 
 .perfil-artista {
@@ -505,6 +536,7 @@ button:hover {
     flex-direction: column;
 }
 
+/*barra de navegación o breadcrumbs superior*/
 .breadcrumbs {
     width: 100%;
     margin: 0 0 20px 0;
@@ -516,11 +548,13 @@ button:hover {
     margin-top: -10px;
 }
 
+/*enlace de retorno de color naranja en los breadcrumbs*/
 .breadcrumbs .link-naranja {
     color: #ff8c00;
     text-decoration: none;
 }
 
+/*separadores de texto en la ruta de navegación*/
 .breadcrumbs .separador {
     color: white;
     margin: 0 8px;
@@ -530,10 +564,12 @@ button:hover {
     margin: 0 8px;
 }
 
+/*indicador del artista actual en la navegación*/
 .breadcrumbs .artista-actual {
     color: white;
 }
 
+/*indicador de canciones en tono atenuado*/
 .breadcrumbs .canciones-actual {
     color: rgba(255, 255, 255, 0.459);
 }
@@ -541,17 +577,18 @@ button:hover {
 /* --- SECCIÓN SUPERIOR (Foto, Bio y Álbumes) --- */
 .perfil-top {
     display: grid;
-    /* Foto: 400px (antes 320px), Bio: crece flexiblemente (1.2fr), Álbumes: fijo (350px) */
     grid-template-columns: 400px 600px 1fr;
     gap: 35px; /* Un poco más de aire entre bloques */
     margin-bottom: 40px;
     align-items: start;
 }
 
+/*alineación a la izquierda para el bloque informativo central*/
 .perfil-info {
-    text-align: left; /* Aseguramos que todo el bloque esté a la izquierda */
+    text-align: left;
 }
 
+/*imagen de perfil del artista*/
 .perfil-imagen img {
     width: 75%;
     aspect-ratio: 1 / 1; /* Esto fuerza a que sea un cuadrado perfecto siempre */
@@ -562,6 +599,7 @@ button:hover {
     box-shadow: 0 0 30px rgba(255, 140, 0, 0.4);
 }
 
+/*tipografía y efectos para el nombre principal del artista*/
 .perfil-nombre {
     font-size: 42px;
     color: white;
@@ -570,6 +608,7 @@ button:hover {
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
 }
 
+/*estilo para destacar el género musical del artista*/
 .perfil-genero {
     color: #ff8c00;
     font-size: 20px;
@@ -577,7 +616,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* Líneas separadoras de la info central */
+/*primer separador horizontal de color naranja*/
 .separador-horizontal1 {
     width: 100%;
     height: 1px;
@@ -585,6 +624,7 @@ button:hover {
     margin: 20px 0;
 }
 
+/*segundo separador horizontal de color blanco translúcido*/
 .separador-horizontal2 {
     width: 100%;
     height: 1px;
@@ -592,6 +632,7 @@ button:hover {
     margin: 20px 0;
 }
 
+/*bloque de biografía con interlineado optimizado para lectura*/
 .perfil-bio {
     color: #e0e0e0;
     line-height: 1.8; /* Más espacio entre líneas para lectura fácil */
@@ -601,23 +642,27 @@ button:hover {
     max-width: 100%; 
 }
 
+/*contenedor de datos rápidos del artista en formato flexwrap*/
 .datos-rapidos {
     display: flex;
     flex-wrap: wrap; /* Permite que los datos se ajusten en varias filas si no caben en una sola */
     gap: 20px;
 }
 
+/*caja alineada para un dato rápido individual*/
 .dato-rapido {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
+/*iconos de los datos rápidos en color naranja*/
 .dato-rapido i {
     color: #ff8c00;
     font-size: 30px;
 }
 
+/*etiqueta o label descriptor de letra pequeña*/
 .dato-rapido .label {
     display: block;
     color: #ff8c00;
@@ -626,6 +671,7 @@ button:hover {
     margin-bottom: 3px;
 }
 
+/*valor destacado en blanco para la información del dato rápido*/
 .dato-rapido .valor {
     color: white;
     font-size: 16px;
@@ -639,7 +685,7 @@ button:hover {
     gap: 15px;
     margin-bottom: 20px;
 }
-
+/*tipografía en mayúsculas para los subtítulos de secciones*/
 .seccion-titulo h3 {
     color: #ff8c00;
     font-size: 15px;
@@ -649,6 +695,7 @@ button:hover {
     text-transform: uppercase;
 }
 
+/*línea naranja expansiva que decora el lado del título*/
 .seccion-titulo .linea {
     flex-grow: 1;
     height: 1px;
@@ -656,21 +703,25 @@ button:hover {
 }
 
 /* --- ÁLBUMES --- */
+/*contenedor del bloque de álbumes con ancho controlado*/
 .perfil-albumes {
     width: 70%;
     max-width: 500px; /* Evita que crezcan infinito en pantallas enormes */
     justify-self: center; /* Los empuja hacia la derecha del contenedor */
 }
 
+/*distribución flex para organizar las portadas de los álbumes*/
 .albumes-grid {
     display: flex;
     gap: 25px; /* Un poco más de espacio entre portadas */
 }
 
+/*tarjeta individual de un álbum*/
 .album-card {
     flex: 1;
 }
 
+/*portadas de los álbumes*/
 .album-card img {
     width: 100%;
     aspect-ratio: 1/1;
@@ -682,22 +733,26 @@ button:hover {
     transition: 0.3s ease;
 }
 
+/*ligero efecto de aumento*/
 .album-card img:hover {
     transform: scale(1.05);
 }
 
+/*título del álbum en color blanco*/
 .album-card h4 {
     color: white;
     font-size: 14px;
     margin-bottom: 3px;
 }
 
+/*año o detalles secundarios del álbum en color gris*/
 .album-card p {
     color: #aaa;
     font-size: 12px;
     margin: 0;
 }
 
+/*botón ver todos los álbumes*/
 .btn-ver-todos {
     display: flex;
     align-items: center;
@@ -715,30 +770,34 @@ button:hover {
     box-sizing: border-box;
 }
 
+/*cambio de fondo e iluminación*/
 .btn-ver-todos:hover {
     background: rgba(255, 140, 0, 0.1);
     border-color: #ff8c00;
 }
 
 /* --- SECCIÓN INFERIOR (INFORMACIÓN DETALLADA) --- */
+/*contenedor de fondo oscuro para información detallada*/
 .perfil-bottom {
     background: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 20px 30px;
 }
+/*rejilla de tres columnas para ordenar los ítems de información*/
 .info-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-
+/*alineación para cada bloque de ítem informativo*/
 .info-item {
     display: flex;
     align-items: flex-start;
     gap: 15px;
 }
 
+/*iconos de la información detallada con ancho fijo centrado*/
 .info-item i {
     color: #ff8c00;
     font-size: 24px;
@@ -746,7 +805,7 @@ button:hover {
     width: 30px;
     text-align: center;
 }
-
+/*descripción del término en color grisáceo*/
 .info-item .label {
     display: block;
     color: #aaa;
@@ -754,7 +813,7 @@ button:hover {
     margin-bottom: 5px;
     text-align: left;
 }
-
+/*texto del valor final alineado a la izquierda*/
 .info-item .valor {
     color: white;
     font-size: 16px;
@@ -776,10 +835,15 @@ button:hover {
 
 
 /* ============================================================
-   NUEVA SECCIÓN: PÁGINA DE CANCIONES (VERSIÓN MAXI-GIGANTE)
+    9. PÁGINA DE CANCIONES (VERSIÓN MAXI-GIGANTE Canciones.html)
+     - Tarjeta gigante
+     - Contenido proporcionalmente más grande
+     - Álbumes más grandes
+     - Títulos de canciones imponentes
+     - Fila de canción con más aire
    ============================================================ */
-
-/* 1. Tarjeta alineada con Header y Menú */
+   
+/* página de canciones (versión maxi-gigante) */
 .tarjeta-gigante {
     width: 90.5%;
     margin-left: 40px;
@@ -789,7 +853,7 @@ button:hover {
     height: 82vh; 
 }
 
-/* 2. Contenido proporcionalmente más grande */
+/* distribución en tres columnas proporcionales con comportamiento grid */
 .contenido-tres-columnas {
     display: grid;
     grid-template-columns: minmax(220px, 290px) 1fr minmax(220px, 320px); /* Columnas laterales más anchas */
@@ -798,6 +862,7 @@ button:hover {
     overflow: hidden;
 }
 
+/*estructura vertical para las columnas internas*/
 .columna-interna {
     display: flex;
     flex-direction: column;
@@ -805,6 +870,7 @@ button:hover {
     overflow: hidden;
 }
 
+/*zona con scroll vertical para contenidos que excedan el alto*/
 .scroll-interno {
     overflow-y: auto;
     padding-right: 20px;
@@ -812,6 +878,7 @@ button:hover {
 }
 
 /* --- COLUMNA IZQUIERDA: ÁLBUMES (MÁS GRANDES) --- */
+/*título de la sección de álbumes con línea decorativa*/
 .col-albumes h3 {
     display: flex;
     align-items: center;
@@ -832,6 +899,7 @@ button:hover {
     opacity: 0.5;
 }
 
+/*contenedor vertical para la lista de álbumes izquierdos*/
 #contenedor-albumes-izq {
     padding-left: 20px; /* Espacio para que la foto sobresalga a la izquierda */
     display: flex;
@@ -839,6 +907,7 @@ button:hover {
     gap: 30px;
 }
 
+/*tarjeta de álbum estilo nuevo - fila oscura con bordes sutiles*/
 .album-card-estilo-nuevo {
     display: flex;
     align-items: center;
@@ -850,6 +919,7 @@ button:hover {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/*contenedor para la portada flotante que sobresale a la izquierda*/
 .portada-flotante {
     width: 110px;
     height: 110px;
@@ -865,6 +935,7 @@ button:hover {
     border-radius: 12px;
 }
 
+/*textos informativos dentro de la tarjeta de álbum*/
 .album-card-info {
     margin-left: 20px;
     display: flex;
@@ -894,6 +965,7 @@ button:hover {
 }
 
 /* --- COLUMNA CENTRAL: CANCIONES (ARREGLO BREADCRUMB) --- */
+/*título dinámico para la lista de canciones*/
 .titulo-canciones-dinamico {
     text-align: left;
     font-size: 25px; /* Título imponente */
@@ -902,6 +974,7 @@ button:hover {
     letter-spacing: 0px;
 }
 
+/*fila de canción individual con cambio de fondo al pasar el cursor*/
 .cancion-fila {
     display: flex;
     align-items: center;
@@ -915,18 +988,20 @@ button:hover {
     background: #0a0a09;
     cursor: pointer;
 }
+/*miniatura de la imagen de la canción*/
 .foto-cancion {
     width: 45px;
     height: auto;
     border-radius: 3px;
     margin-right: 10px;
 }
+/*número de índice o posición de la canción en la lista*/
 .posicion-numero {
     font-size: 15px;
     width: 40px;
     color: rgb(253, 253, 253); 
 }
-
+/*bloque de textos de la canción - título y artista*/
 .info-cancion {
     flex-grow: 1; 
     margin-left: 15px;
@@ -943,6 +1018,7 @@ button:hover {
     color: #ffbc6a;
     text-align: left;
 }
+/*texto de duración de la canción alineado a la derecha*/
 .duracion-txt {
     font-size: 16px;
     color: #ffffff;
@@ -950,8 +1026,9 @@ button:hover {
     text-align: right;
 }
 
+/*botón flotante circular de play en color naranja*/
 .play-orange { 
-    width: 35px; /* Un poco más grande para que sea clickable */
+    width: 35px;
     height: 35px;
     font-size: 14px;
     background: #ff8c00;
@@ -961,7 +1038,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 20px; /* Separación de la duración */
+    margin-left: 20px;
     transition: transform 0.2s;
 }
 
@@ -971,6 +1048,7 @@ button:hover {
 }
 
 /* --- COLUMNA DERECHA: BIO (MÁS PROPORCIONAL) --- */
+/*avatar cuadrado del artista de la biografía*/
 .foto-autor {
     width: 100%;/* Ocupará el 100% de su contenedor... */
     max-width: 260px; /* ...pero nunca será más grande de 260px */
@@ -979,27 +1057,64 @@ button:hover {
     border-radius: 15px;
     align-self: center;
 }
+/*nombre del artista en el bloque lateral de biografía*/
 #artista-nombre-bio {
     font-size: 30px;
     color: #e0e0e0;
     margin-top: 13px;
     margin-bottom: 10px;
 }
+/*etiqueta destacada para el género de la bio*/
 .bio-genero {
     font-size: 14px;
     font-weight: bold;
     color: #ff8c00;
     margin-bottom: 15px;
 }
+/*bloque de texto descriptivo de la biografía*/
 .bio-texto {
     font-size: 12px;
     padding-bottom: 30px;
     color: #e0e0e0bb;
     text-align: left;
 }
-/* Scrollbar más visible para tarjetas grandes */
-.scroll-interno::-webkit-scrollbar { width: 8px; }
-.scroll-interno::-webkit-scrollbar-thumb { background: #ff8c00; border-radius: 10px; }
+/* barra de scroll personalizada para las zonas con scroll interno */
+.scroll-interno::-webkit-scrollbar { 
+    width: 8px; 
+}
+.scroll-interno::-webkit-scrollbar-thumb { 
+    background: #ff8c00; 
+    border-radius: 10px; 
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1081,9 +1196,16 @@ button:hover {
     }
 
     /* Orden lógico: Bio -> Canciones -> Álbumes */
-    .col-bio { order: 1; text-align: center; }
-    .col-canciones { order: 2; }
-    .col-albumes { order: 3; }
+    .col-bio {
+        order: 1;
+        text-align: center;
+    }
+    .col-canciones {
+        order: 2;
+    }
+    .col-albumes {
+        order: 3;
+    }
 
     /* Forzamos que las columnas no intenten tener scroll */
     .columna-interna, .scroll-interno {
@@ -1335,6 +1457,16 @@ button:hover {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /* ============================================================
    CONFIGURACIÓN PARA MÓVIL: EXPLORADOR DE ARTISTAS
    ============================================================ */
@@ -1439,6 +1571,10 @@ button:hover {
         text-align: center !important;
     }
 }
+
+
+
+
 
 
 

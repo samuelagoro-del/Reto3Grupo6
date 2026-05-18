@@ -5,23 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flame Beat - Canciones</title>
+    <!-- Vinculación del CSS -->
     <link rel="stylesheet" href="css/estilos.css">
+    <!--librería externa para los iconos de la interfaz -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body class="pagina-principal">
 
+    <!-- cabecera superior con efecto translúcido -->
     <header class="glass-header">
+        <!-- mini logo y nombre de la marca en la cabecera -->
         <div class="logo-mini">
             <img src="img/logo.png" alt="Flame Beat">
             <span>FLAME BEAT</span>
         </div>
+
+        <!-- cuadro de búsqueda con icono de lupa -->
         <div class="search-bar disabled-search">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="buscador" placeholder="Búsqueda deshabilitada en perfiles..." disabled>
         </div>
     </header>
 
+    <!-- menú de navegación de la aplicación -->
     <nav class="glass-menu">
         <ul>
             <li><a href="PaginaPrincipal.html"><i class="fa-solid fa-house"></i> INICIO</a></li>
@@ -30,7 +37,9 @@
         </ul>
     </nav>
 
+    <!-- contenedor principal de la vista de canciones -->
     <div class="contenedor-principal glass-card tarjeta-gigante">
+        <!-- ruta de navegación o breadcrumbs -->
         <div class="breadcrumbs">
             <span class="link-naranja">Artistas</span>
             <span class="separador">&gt;</span>
@@ -41,15 +50,17 @@
 
 
 
-
+        <!-- estructura de tres columnas para el contenido principal -->
         <div class="contenido-tres-columnas">
-
+            <!-- columna izquierda - biografía e información del artista -->
             <aside class="columna-interna col-bio">
                 <img id="artista-foto" src="" alt="Artista" class="foto-autor">
                 <h2 id="artista-nombre-bio">Artista</h2>
                 <div id="artista-genero" class="bio-genero"> </div>
                 <div id="artista-biografia" class="bio-texto">
                 </div>
+
+                <!-- bloque de datos rápidos del artista -->
                 <div class="datos-rapidos">
                     <div class="dato-rapido">
                         <i class="fa-solid fa-calendar"></i>
@@ -68,15 +79,18 @@
                 </div>
             </aside>
 
+            <!-- columna central - listado dinámico de canciones -->
             <main class="columna-interna col-canciones">
                 <h1 id="titulo-pagina-canciones" class="titulo-canciones-dinamico">CANCIONES</h1>
-
+                <!-- contenedor donde javascript inyectará la lista de canciones -->
                 <div id="lista-canciones" class="scroll-interno">
                 </div>
             </main>
 
+            <!-- columna derecha - sección de álbumes relacionados -->
             <aside class="columna-interna col-albumes">
                 <h3>ÁLBUMES</h3>
+                <!-- contenedor donde javascript inyectará los álbumes -->
                 <div id="contenedor-albumes-izq">
                 </div>
             </aside>
@@ -84,10 +98,12 @@
         </div>
     </div>
 
+    <!-- pie de página con derechos de autor y datos de contacto -->
     <footer class="glass-footer">
         <p>&copy; 2026 FLAME BEAT | <span class="naranja">@flamebeat@gmail.com</span> | <span class="naranja">923348014</span></p>
     </footer>
 
+    <!-- enlace al archivo javascript para cargar artistas y filtrar búsquedas -->
     <script src="js/canciones.js"></script>
 </body>
 

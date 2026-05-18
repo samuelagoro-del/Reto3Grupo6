@@ -1,4 +1,6 @@
+//evento de inicio - ejecuta el script una vez estructurado el html del documento
 document.addEventListener("DOMContentLoaded", () => {
+    //lectura de parámetros - extrae el id del artista desde la dirección url de la página
     const urlParams = new URLSearchParams(window.location.search);
     const artistaId = urlParams.get('id');
 
@@ -10,17 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
         linkAlbumes.href = `canciones.html?id=${artistaId}`;
     }
 
+    //control de errores preliminar - frena la ejecución si no se detecta ningún id en la url
     if (!artistaId) {
         document.getElementById("perfil-nombre").textContent = "ARTISTA NO ENCONTRADO";
         return;
     }
 
-    fetch('Artistas.json') 
+    //petición de datos - lee el json de artistas para localizar al músico seleccionado
+    fetch('json/Artistas.json') 
         .then(response => {
             if (!response.ok) throw new Error("Error al cargar el JSON");
             return response.json();
         })
         .then(data => {
+            //método de búsqueda - filtra el array para emparejar el id de la url con el id del json
             const artistaEncontrado = data.artistas.find(art => art.id == artistaId);
             if (artistaEncontrado) {
                 renderizarPerfil(artistaEncontrado);
@@ -30,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .catch(error => console.error("Error:", error));
 
+    //función de pintado de perfil - inyecta toda la información del artista en el dom
     function renderizarPerfil(artista) {
         // Textos Básicos y Bio
         document.getElementById("bread-nombre").textContent = artista.nombre;
@@ -57,11 +63,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("info-discografica").textContent = artista.discografica || "No disponible";
         document.getElementById("info-activo").textContent = artista.activo_desde || "No disponible";
 
-        // Renderizar Álbumes
+        //preparación de la rejilla de álbumes - captura y vacía el contenedor previo
         const contenedorAlbumes = document.getElementById("contenedor-albumes");
         contenedorAlbumes.innerHTML = ""; 
 
+        //condicional de álbumes - comprueba si el artista dispone de una lista musical
         if (artista.albumes && artista.albumes.length > 0) {
+            //bucle iterador - mapea el listado de álbumes para maquetar sus tarjetas individuales
             artista.albumes.forEach(album => {
                 const albumCard = document.createElement("div");
                 albumCard.classList.add("album-card");
@@ -74,9 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h4>${album.titulo}</h4>
                     <p>${album.año}</p>
                 `;
+                //inserción final - añade la ficha de disco al interior del contenedor de álbumes
                 contenedorAlbumes.appendChild(albumCard);
             });
         } else {
+            //mensaje de aviso - informa textualmente en pantalla si el array de discos está vacío
             contenedorAlbumes.innerHTML = "<p style='color: white;'>No hay álbumes registrados.</p>";
         }
     }
